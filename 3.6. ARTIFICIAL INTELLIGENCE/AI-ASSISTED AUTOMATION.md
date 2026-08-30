@@ -1,0 +1,79 @@
+# AI-Assisted Automation
+
+> Using AI to support (not fully replace) automation tasks like report generation, data quality checks, and repetitive analysis.
+
+## Overview
+
+AI-assisted automation combines AI tools' language and pattern-recognition capabilities with traditional scripting to handle tasks that are repetitive but not always perfectly rule-based — cases where pure code-based automation is harder to apply cleanly.
+
+## Why It Matters for a Data Analyst
+
+Some repetitive tasks involve judgment or unstructured input (interpreting varied text, drafting varied summaries) that's harder to automate with rigid rules alone. AI can help bridge this gap, though it still requires oversight.
+
+## How AI Supports Automation
+
+### Report Generation
+AI can help draft narrative summaries of data (e.g. "sales rose 8% this month, driven primarily by...") that would otherwise require manual write-up each reporting period.
+
+### Data Cleaning
+AI can help identify likely data quality issues in unfamiliar data or suggest standardization rules for messy categorical text, complementing rule-based cleaning scripts.
+
+### Documentation
+AI can help keep documentation for scripts, queries, and dashboards up to date as they change, reducing a task that's often neglected under time pressure.
+
+### Classification
+AI can help categorize unstructured text data (e.g. customer feedback) into meaningful categories, a task that's difficult to hard-code with simple rules.
+
+### Text Extraction
+AI can help extract structured information from unstructured text (e.g. pulling key details from customer support tickets).
+
+### Workflow Automation
+AI can be integrated into broader automated pipelines to handle steps that benefit from language understanding, alongside traditional rule-based steps for everything else.
+
+### Data Quality Checks
+AI can help flag data that "looks wrong" in ways that are hard to specify as a fixed rule — though such flags should always be reviewed, not acted on automatically without review.
+
+### Repetitive Analysis
+AI can help draft the first pass of an analysis that follows a similar structure each time (e.g. a recurring monthly summary), which a human analyst then reviews and refines.
+
+## Real-World Data Analyst Use Cases
+
+- Using AI to draft the narrative portion of a recurring report, then reviewing it against the actual data before sending
+- Using AI to help categorize open-text survey responses into themes for further quantitative analysis
+- Using AI to flag unusual-looking records in a dataset for manual review, as a complement to rule-based validation checks
+
+## Common Mistakes
+
+- Fully automating a pipeline step with AI output that isn't reviewed by a human, especially for anything stakeholder-facing
+- Assuming AI-based classification or extraction is perfectly accurate without measuring its actual error rate
+- Using AI for tasks that a simple, reliable rule-based script would handle more consistently
+
+## Best Practices
+
+- Keep a human review step in any AI-assisted automation pipeline, especially where output reaches stakeholders directly
+- Measure and periodically check the accuracy of AI-assisted classification or extraction tasks
+- Use AI where judgment or unstructured input genuinely benefits from it — not as a default replacement for reliable rule-based logic
+
+## Interview Perspective
+
+### Common Interview Questions
+- Where would you use AI to support automation, versus a purely rule-based script?
+- How would you validate that an AI-assisted classification process is working correctly?
+- What are the risks of fully automating a process using AI without human review?
+
+### What Interviewers Usually Test
+Whether the candidate understands AI-assisted automation as a hybrid approach requiring oversight, not a fully autonomous replacement for careful analyst work.
+
+### Common Traps
+Suggesting AI should fully replace a human review step in a stakeholder-facing process, without acknowledging the risk of unverified errors reaching decision-makers.
+
+## Practical Application
+
+AI-assisted automation is most valuable for tasks that combine repetition with some degree of unstructured judgment — exactly the middle ground between fully manual work and fully rule-based scripting.
+
+## Revision Summary
+
+- AI-assisted automation is well suited to tasks involving unstructured input or judgment that pure rule-based scripts handle poorly.
+- Common applications: report narratives, data cleaning suggestions, documentation, classification, text extraction.
+- A human review step should remain in place, especially for stakeholder-facing output.
+- Measure AI-assisted process accuracy rather than assuming it's reliable by default.

@@ -1,0 +1,78 @@
+# Git & GitHub
+
+> Version control for analyst work — tracking changes to SQL files, Python scripts, and documentation, and sharing that work publicly or with a team.
+
+## Overview
+
+Git is a version control system that tracks changes to files over time, and GitHub is the most widely used platform for hosting Git repositories online. For a Data Analyst, Git is primarily useful for tracking changes to code (SQL, Python) and for building a public portfolio of work.
+
+## Why a Data Analyst Should Understand This
+
+As analyst work increasingly involves code (SQL scripts, Python notebooks) rather than just spreadsheets, having a reliable way to track changes, collaborate, and share that work becomes valuable — both for team collaboration and for showcasing work publicly to potential employers.
+
+## How It Relates to Analytics
+
+Git isn't an analysis tool itself — it's infrastructure that supports reliable, collaborative, and shareable analyst work, especially once analysis moves beyond single Excel files into scripts and queries.
+
+## When Analysts Interact With It
+
+- Saving and tracking changes to SQL queries or Python scripts used for recurring analysis
+- Collaborating with other analysts or engineers on shared code
+- Publishing a portfolio of analysis projects publicly on GitHub for job applications
+
+## Core Concepts
+
+- **Version control** — a system for tracking changes to files over time, allowing changes to be reviewed, reverted, or compared
+- **Git** — the version control software itself, typically run locally
+- **GitHub** — a cloud platform for hosting Git repositories, adding collaboration features on top of Git
+- **Repository (repo)** — a project's folder, tracked by Git, containing its full history of changes
+- **Commit** — a saved snapshot of changes, with a descriptive message explaining what changed
+- **Branch** — a separate line of development, allowing changes to be made without affecting the main version until ready
+- **Merge** — combining changes from one branch into another
+- **Pull** — retrieving the latest changes from a remote repository (e.g. on GitHub) into a local copy
+- **Push** — sending local changes to a remote repository
+- **Clone** — creating a local copy of a remote repository
+- **Pull request** — a proposed set of changes submitted for review before merging into the main branch
+- **.gitignore** — a file specifying which files/folders Git should not track (e.g. sensitive credentials, temporary files)
+- **README** — a file (typically `README.md`) describing a repository's purpose and contents, usually the first thing a visitor sees
+
+## Basic Workflow
+
+```
+git clone <repository-url>      # copy a repository locally
+git add <file>                  # stage changes for commit
+git commit -m "message"         # save a snapshot with a description
+git push                        # send changes to the remote repository
+git pull                        # retrieve the latest changes from the remote
+```
+
+## An Analyst-Focused Workflow
+
+A typical portfolio-building workflow: write and test a SQL script or Python analysis locally → commit changes with a clear message describing what was done → push to a GitHub repository → write a clear README explaining the project's purpose, approach, and findings → optionally include supporting dashboard screenshots or documentation.
+
+## Important Concepts
+
+- Committing frequently with clear messages makes a project's history genuinely useful, not just a formality
+- A `.gitignore` file should always exclude sensitive information (API keys, credentials, raw proprietary data) before anything is pushed publicly
+- A strong README is often what makes a public portfolio project actually understandable to someone reviewing it
+
+## Interview Relevance
+
+### Common Interview Questions
+- Why would a Data Analyst use Git, even without a software engineering background?
+- What's the difference between `git pull` and `git clone`?
+- How would you structure a GitHub repository for a portfolio project?
+
+### What Interviewers Usually Test
+Basic familiarity and, increasingly, whether the candidate has an actual public GitHub presence showcasing real work — this has become a meaningful differentiator in Data Analyst hiring.
+
+## Relationship to the Core Data Analyst Workflow
+
+Git supports the [[WORKFLOW]] and Portfolio Building indirectly — it's the infrastructure that makes analyst work trackable, collaborative, and shareable, rather than a workflow stage itself.
+
+## Revision Summary
+
+- Git tracks changes to files over time; GitHub hosts Git repositories online with added collaboration features.
+- Core workflow: clone → add → commit → push/pull.
+- A `.gitignore` file should always exclude sensitive credentials or data before publishing publicly.
+- A clear README is often what makes a public portfolio project genuinely useful to a reviewer.

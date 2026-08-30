@@ -1,0 +1,141 @@
+# Working with APIs and Files
+
+> Extracting data from files (CSV, Excel, JSON, TXT) and APIs, and saving results — the practical data-acquisition side of Python for analysts.
+
+## Overview
+
+Before analysis can happen, data has to be acquired — from a file someone exported, or from an API that provides live data. This note covers the practical mechanics of reading common file formats and pulling data from APIs, framed around what a Data Analyst actually needs.
+
+## Why It Matters for a Data Analyst
+
+Not all data lives conveniently in a database ready to query. Analysts frequently need to pull data from files of varying formats, or connect to an external API to get information not otherwise available internally.
+
+## File Formats
+
+### CSV
+```python
+df = pd.read_csv("sales.csv")
+```
+
+### Excel
+```python
+df = pd.read_excel("sales.xlsx", sheet_name="Q3")
+```
+
+### JSON
+```python
+import json
+with open("data.json") as f:
+    data = json.load(f)
+df = pd.json_normalize(data)
+```
+
+### TXT (structured, e.g. tab-delimited)
+```python
+df = pd.read_csv("data.txt", delimiter="\t")
+```
+
+## APIs — Core Concepts
+
+- **Endpoint** — a specific URL that returns a defined set of data
+- **HTTP request** — the message sent to an API, conceptually asking for or sending data
+- **JSON response** — the typical format an API returns data in
+- **Authentication** — proving the request is authorized, often via an API key or token
+- **Pagination** — APIs often return data in pages rather than all at once, requiring multiple requests to retrieve everything
+- **Rate limits** — restrictions on how many requests can be made within a given time period
+
+## Making an API Request (Conceptual Example)
+
+```python
+import requests
+
+response = requests.get(
+    "https://api.example.com/sales",
+    headers={"Authorization": "Bearer YOUR_API_KEY"},
+    params={"start_date": "2025-01-01"}
+)
+
+if response.status_code == 200:
+    data = response.json()
+    df = pd.json_normalize(data)
+else:
+    print(f"Request failed: {response.status_code}")
+```
+
+## Handling Pagination (Conceptual Example)
+
+```python
+all_results = []
+page = 1
+while True:
+    response = requests.get(
+        "https://api.example.com/sales",
+        params={"page": page}
+    )
+    page_data = response.json()
+    if not page_data:
+        break
+    all_results.extend(page_data)
+    page += 1
+
+df = pd.json_normalize(all_results)
+```
+
+## Error Handling
+
+```python
+try:
+    response = requests.get("https://api.example.com/sales", timeout=10)
+    response.raise_for_status()
+except requests.exceptions.RequestException as e:
+    print(f"API request failed: {e}")
+```
+
+## Saving Data
+
+```python
+df.to_csv("output.csv", index=False)
+df.to_excel("output.xlsx", index=False)
+```
+
+## Real-World Data Analyst Use Cases
+
+- Pulling marketing performance data from a third-party platform's API on a recurring basis
+- Combining several file exports (CSV, Excel) from different systems into a single analysis-ready DataFrame
+- Extracting nested JSON data from an API response into a flat, tabular structure for analysis
+
+## Common Mistakes
+
+- Not handling API errors or rate limits, causing a script to fail unpredictably or get temporarily blocked
+- Assuming an entire API result set fits in a single response, missing paginated data
+- Hard-coding API keys directly in a script rather than storing them securely (e.g. environment variables)
+
+## Best Practices
+
+- Always check the response status before assuming an API call succeeded
+- Handle pagination explicitly for any API known to paginate results
+- Store credentials securely, never directly in shared or version-controlled code
+
+## Interview Perspective
+
+### Common Interview Questions
+- How would you extract data from a REST API in Python?
+- What is pagination, and why does it matter when pulling data from an API?
+- How would you handle a failed API request gracefully?
+
+### What Interviewers Usually Test
+Practical awareness of real-world API behavior (errors, pagination, authentication), not just the basic `requests.get()` call.
+
+### Common Traps
+Writing a script that works during testing but breaks in production because it doesn't handle pagination, rate limits, or failed requests.
+
+## Practical Application
+
+This topic bridges Python and APIs — most real analyst automation involving external data touches both file handling and API usage at some point.
+
+## Revision Summary
+
+- Pandas can read CSV, Excel, JSON, and delimited text files directly into a DataFrame.
+- APIs typically return JSON, require authentication, and may paginate large result sets.
+- Always check response status and handle errors — API calls fail more often than file reads.
+- Store API credentials securely, never hard-coded directly in shared scripts.

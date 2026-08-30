@@ -1,0 +1,81 @@
+# Regression Basics
+
+> Modeling the relationship between variables to understand influence and make predictions.
+
+## Overview
+
+Regression estimates the relationship between one or more independent variables and a dependent variable — quantifying how changes in the inputs relate to changes in the outcome. It's one of the most widely used statistical techniques in business analysis, bridging descriptive analysis and predictive modeling.
+
+## Why It Matters for a Data Analyst
+
+Regression lets an analyst move beyond "these two things are correlated" toward "here's roughly how much the outcome changes for a given change in the input" — a more specific and actionable form of insight.
+
+## Core Concepts
+
+- **Dependent variable (outcome)** — the variable being predicted or explained
+- **Independent variable(s) (predictors)** — the variable(s) used to explain or predict the outcome
+- **Simple linear regression** — regression with a single independent variable
+- **Multiple regression** — regression with two or more independent variables
+- **Coefficient** — the estimated effect of a one-unit change in a predictor on the outcome, holding other predictors constant
+- **R² (R-squared)** — the proportion of variance in the outcome explained by the model, ranging from 0 to 1
+- **Residuals** — the difference between actual and predicted values for each observation
+
+## Simple Linear Regression
+
+The basic form: `y = β₀ + β₁x + ε`, where `y` is the outcome, `x` is the predictor, `β₀` is the intercept, `β₁` is the coefficient (slope), and `ε` is the error term.
+
+**Example:** Predicting revenue (`y`) based on marketing spend (`x`). A coefficient of 3 would mean each additional dollar of marketing spend is associated with roughly $3 in additional revenue, on average, within the range of data observed.
+
+## Multiple Regression
+
+Extends the same idea to several predictors: `y = β₀ + β₁x₁ + β₂x₂ + ... + ε`. Each coefficient represents the effect of that predictor *holding the others constant* — an important distinction from simple regression's single-variable relationship.
+
+## Interpreting R²
+
+R² indicates how much of the variation in the outcome is explained by the model. An R² of 0.65 means 65% of the variance in the outcome is explained by the predictors included — the remaining 35% is due to factors not captured by the model, or random variation.
+
+## Assumptions (Introductory)
+
+Linear regression relies on several assumptions for its results to be valid, including a roughly linear relationship between predictors and outcome, independence of observations, and residuals that are roughly normally distributed with consistent variance. Violations of these assumptions don't necessarily invalidate a regression outright, but they should prompt caution in interpreting results.
+
+## Real-World Data Analyst Use Cases
+
+- Estimating how much revenue increases, on average, for each additional dollar spent on a marketing channel
+- Understanding which of several factors (price, promotion, seasonality) has the strongest relationship with sales
+- Building a simple predictive model for a metric like expected monthly revenue
+
+## Common Mistakes
+
+- Interpreting a regression coefficient as proof of causation, when regression alone (without a controlled experiment) only establishes association 
+- Ignoring a low R² and treating the model's predictions as more reliable than they are
+- Including highly correlated predictors together (multicollinearity), which can make individual coefficients unstable and hard to interpret
+
+## Best Practices
+
+- Always report R² alongside coefficients, so the model's explanatory power is clear
+- Check whether independent variables are themselves highly correlated before interpreting individual coefficients
+- Be explicit that regression coefficients describe association, not necessarily causation, unless the data comes from a controlled experiment
+
+## Interview Perspective
+
+### Common Interview Questions
+- What does the coefficient in a simple linear regression represent?
+- What does R² tell you, and what does a low R² imply?
+- Why doesn't a regression coefficient prove causation?
+
+### What Interviewers Usually Test
+Whether the candidate can correctly interpret a coefficient and R² in plain business language, and understands the limits of what regression can claim.
+
+### Common Traps
+Describing a regression coefficient as if it proves the predictor *causes* the outcome, without qualification.
+
+## Practical Application
+
+Regression is often the first step toward more advanced modeling (used heavily by Data Scientists), but even at the basic level it's a powerful tool for quantifying relationships in business data.
+
+## Revision Summary
+
+- Regression estimates the relationship between predictors and an outcome, quantified through coefficients.
+- R² indicates how much of the outcome's variation the model explains.
+- Multiple regression coefficients represent effects holding other predictors constant.
+- Regression establishes association, not causation, unless paired with a controlled experimental design.

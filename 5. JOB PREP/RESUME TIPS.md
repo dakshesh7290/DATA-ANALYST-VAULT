@@ -1,0 +1,103 @@
+# Resume Tips
+
+> How to structure and write a Data Analyst resume that clearly communicates impact, not just responsibilities.
+
+## Overview
+
+A resume's job is to get an interview, not to fully document a career. For a Data Analyst, this means clearly showing technical skills, real project impact, and enough context for a recruiter or hiring manager to quickly understand what you've actually done and what results followed.
+
+## Resume Structure
+
+A typical, effective structure:
+1. **Header** — name, contact information, LinkedIn, GitHub/portfolio link
+2. **Professional Summary** — 2–3 lines framing your background and focus
+3. **Skills** — a clear, scannable list of relevant technical skills
+4. **Experience** — roles, with impact-focused bullet points
+5. **Projects** — especially important for candidates with limited work experience
+6. **Education**
+7. **Certifications** (if relevant)
+
+## Professional Summary
+
+A short summary at the top should communicate: who you are professionally, your core technical strengths, and what kind of role you're targeting. Avoid generic filler ("hardworking team player") — focus on specific, relevant substance.
+
+## Skills Section
+
+List concrete tools and technologies (SQL, Excel, Power BI, Python, specific libraries) rather than vague soft skills. Group related skills together (e.g. "Data Analysis: SQL, Python, Pandas" / "Visualization: Power BI, Excel, Matplotlib") for scannability.
+
+## Projects Section
+
+For candidates early in their career, projects are often as important as — or more important than — formal experience. Each project entry should briefly convey the business problem, tools used, and the outcome/insight.
+
+## Experience Section
+
+Each role should focus on outcomes and impact, not just a list of duties.
+
+## Certifications
+
+List genuinely relevant, credible certifications, but don't let this section dominate the resume — practical skills and project impact typically matter more to hiring managers than certificates alone.
+
+## Education
+
+List degree, institution, and graduation date. Relevant coursework can be included briefly if it strengthens a case for technical skills, especially for candidates with limited work experience.
+
+## ATS Optimization
+
+Many companies use Applicant Tracking Systems (ATS) to scan resumes before a human sees them. To perform well:
+- Use standard section headers (Experience, Education, Skills) rather than creative alternatives
+- Include exact keywords and tool names from the job description where genuinely applicable
+- Avoid text embedded in images, tables, or unusual formatting that an ATS might fail to parse
+- Save and submit in the format requested (often PDF, sometimes Word)
+
+## Quantifying Impact
+
+Wherever possible, attach a number to an accomplishment — this makes impact concrete and credible rather than vague.
+
+**Weak:** "Built dashboards for the sales team."
+**Strong:** "Built a Power BI dashboard adopted by a 15-person sales team, reducing manual reporting time by approximately 5 hours per week."
+
+## Action Verbs
+
+Start bullet points with strong, specific action verbs: *analyzed, built, automated, identified, designed, reduced, improved, streamlined* — rather than passive or vague phrasing like "responsible for" or "worked on."
+
+## Avoiding Generic Statements
+
+Avoid vague, unverifiable claims ("excellent communication skills," "detail-oriented") unless immediately backed by a specific example demonstrating that trait in action.
+
+## Tailoring to Job Descriptions
+
+Adjust which skills and projects are emphasized based on the specific role's job description — a resume tailored to what a specific employer is looking for consistently outperforms a single generic version sent everywhere.
+
+## Technical Skill Representation
+
+Be honest and specific about proficiency level — claiming expert-level skill in a tool you've only briefly used can backfire quickly in a technical interview.
+
+## Project Bullet Structure
+
+A reliable structure for writing project or experience bullets:
+
+**Action → Method/Tool → Business Problem → Result/Impact**
+
+**Example:**
+> "Built a customer churn analysis (Action) using SQL and Python (Method/Tool) to identify at-risk customer segments for a subscription business (Business Problem), surfacing a segment representing 18% of revenue at elevated churn risk (Result/Impact)."
+
+## Common Mistakes
+
+- Listing duties instead of outcomes ("Responsible for building reports" instead of what those reports achieved)
+- Making the resume too long — most early-career analyst resumes should fit on a single page
+- Including outdated, irrelevant, or overly generic skills that dilute the technical focus
+- Typos or inconsistent formatting, which can create an impression of carelessness in a detail-oriented field
+
+## Best Practices
+
+- Lead every bullet with impact or outcome, using the Action → Method → Problem → Result structure
+- Tailor the resume's emphasis to each specific job description
+- Keep formatting simple and ATS-friendly — clarity over visual flourish
+- Have someone else review the resume for clarity and typos before submitting
+
+## Revision Summary
+
+- Lead with impact, not duties — use Action → Method/Tool → Business Problem → Result/Impact for bullet points.
+- Quantify accomplishments wherever possible; vague claims are far less persuasive than specific numbers.
+- Keep the resume ATS-friendly: standard headers, relevant keywords, simple formatting.
+- Tailor the resume's emphasis to each specific job description rather than using one generic version everywhere.

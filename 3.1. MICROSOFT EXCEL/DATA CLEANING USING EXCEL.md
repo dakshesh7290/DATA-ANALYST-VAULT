@@ -1,0 +1,85 @@
+# Data Cleaning Using Excel
+
+> Identifying and fixing missing values, duplicates, inconsistent formatting, and incorrect data types before analysis.
+
+## Overview
+
+Real-world data is rarely analysis-ready. Before any meaningful analysis, an analyst typically spends significant time identifying and fixing data quality issues — missing values, duplicate records, inconsistent text formatting, and incorrect data types. Excel offers several built-in tools for this, in addition to formula-based approaches.
+
+## Why It Matters for a Data Analyst
+
+Analysis built on unclean data produces misleading results, even if every formula afterward is technically correct. Data cleaning is not a separate skill from analysis — it's a prerequisite step within it.
+
+## Core Concepts
+
+- **Missing values** — blank cells that may need to be excluded, flagged, or imputed
+- **Duplicates** — repeated records that can inflate counts or sums if not removed
+- **Inconsistent formatting** — the same value written differently ("NY", "New York", "new york")
+- **Incorrect data types** — numbers stored as text, dates stored inconsistently
+
+## How It Works
+
+Excel provides both built-in tools (Remove Duplicates, Text to Columns, Find & Replace) and formulas (`TRIM`, `SUBSTITUTE`, `ISBLANK`) for identifying and correcting these issues. For more complex or repeatable cleaning, Power Query is generally preferred.
+
+## When to Use It
+
+Data cleaning happens at the start of nearly every analysis — before building PivotTables, formulas, or dashboards on top of a dataset.
+
+## Real-World Data Analyst Use Cases
+
+- Standardizing inconsistent region names before summarizing sales by region
+- Removing duplicate customer records before counting unique customers
+- Converting a text-formatted date column into proper date values so it can be sorted and filtered correctly
+
+## Examples
+
+Finding blank cells in a column:
+```
+=COUNTBLANK(A:A)
+```
+
+Standardizing inconsistent casing:
+```
+=PROPER(TRIM(A2))
+```
+
+Identifying duplicate values (highlighting, via Conditional Formatting, or listing via formula):
+```
+=COUNTIF(A:A, A2) > 1
+```
+
+## Common Mistakes
+
+- Removing duplicates without first confirming what "duplicate" means for the dataset (e.g. same customer but different order — not necessarily a true duplicate)
+- Deleting rows with missing values without considering whether that biases the remaining data
+- Not checking data types after import — a column of numbers imported as text will silently fail in `SUM` or numeric comparisons
+
+## Best Practices
+
+- Always inspect a new dataset before cleaning it — understand what "clean" should look like for this specific data
+- Keep a copy of the original raw data untouched; clean into a separate sheet or table
+- Document cleaning decisions (e.g. "excluded records missing region field") so the analysis is reproducible and explainable
+
+## Interview Perspective
+
+### Common Interview Questions
+- How would you identify and remove duplicate records in Excel?
+- How would you handle missing values in a numeric column?
+- What steps would you take before trusting a new dataset for analysis?
+
+### What Interviewers Usually Test
+Whether the candidate treats data cleaning as a deliberate, judgment-based process rather than a mechanical checklist.
+
+### Common Traps
+Automatically deleting or imputing missing data without considering the business context of why it's missing.
+
+## Practical Application
+
+Data cleaning is typically the single most time-consuming stage of real analyst work, even though it receives less attention in most tutorials than "the interesting analysis."
+
+## Revision Summary
+
+- Common data quality issues: missing values, duplicates, inconsistent formatting, incorrect data types.
+- Always inspect data before cleaning it — "clean" depends on the dataset and business context.
+- Keep raw data untouched; clean into a separate copy.
+- For repeatable, complex cleaning, Power Query is generally preferred over manual formulas.

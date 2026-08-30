@@ -1,0 +1,227 @@
+{
+  "main": {
+    "id": "89437d1da7d953b1",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb94fa95a4240a07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb70e889d88316af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. HOME/DATA ANALYST VAULT.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DATA ANALYST VAULT"
+            }
+          },
+          {
+            "id": "bb02c4bae0a70c41",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3e3f2452f9c25152",
+    "type": "split",
+    "children": [
+      {
+        "id": "632e17d44b323210",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a23fdab7a31046ac",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8fde3882d6e73035",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 297.6458740234375
+  },
+  "right": {
+    "id": "17fea2808b6fff52",
+    "type": "split",
+    "children": [
+      {
+        "id": "d4715749ab185bcd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8df56f411c4985b2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "6be2773a9f1812b9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "a2803a418967cc22",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9c8efc99f6f639bb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1bbccf7f51d49841",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "bb02c4bae0a70c41",
+  "lastOpenFiles": [
+    "1. HOME/DATA ANALYST VAULT.md",
+    "HOW TO USE THE VAULT.md",
+    "2. MAP OF CONTENT/DATA JOB PROFILES COMPARISON.md",
+    "2. MAP OF CONTENT/DATA ANALYST.md",
+    "2. MAP OF CONTENT/WORKFLOW.md",
+    "2. MAP OF CONTENT/SKILLS HUB/STATISTICS.md",
+    "2. MAP OF CONTENT/SKILLS HUB/STRUCTURED QUERY LANGUAGE.md",
+    "2. MAP OF CONTENT/SKILLS HUB/PYTHON.md",
+    "2. MAP OF CONTENT/SKILLS HUB/MICROSOFT POWER BI.md",
+    "2. MAP OF CONTENT/SKILLS HUB/MICROSOFT EXCEL.md",
+    "2. MAP OF CONTENT/SKILLS HUB/ARTIFICIAL INTELLIGENCE.md",
+    "5. JOB PREP/TOP 100 QUESTIONS.md",
+    "5. JOB PREP/TOP 20 PROJECTS.md",
+    "5. JOB PREP/RESUME TIPS.md",
+    "5. JOB PREP/PORTFOLIO BUILDING GUIDE.md",
+    "4. BEYOND CORE/APPLICATION PROGRAMMING INTERFACES (APIS).md",
+    "4. BEYOND CORE/CLOUD ARCHITECTURE.md",
+    "4. BEYOND CORE/CLOUD MIGRATION.md",
+    "4. BEYOND CORE/CUSTOMER RELATIONSHIP MANAGEMENT (CRM).md",
+    "4. BEYOND CORE/DATA WAREHOUSE.md",
+    "4. BEYOND CORE/EXTRACT, TRANSFORM, LOAD (ETL).md",
+    "4. BEYOND CORE/GIT & GITHUB.md",
+    "3.6. ARTIFICIAL INTELLIGENCE/PROMPT ENGINEERING.md",
+    "3.6. ARTIFICIAL INTELLIGENCE/AI-ASSISTED AUTOMATION.md",
+    "3.6. ARTIFICIAL INTELLIGENCE/AI TOOLS USAGE.md",
+    "3.6. ARTIFICIAL INTELLIGENCE/AI BASICS.md",
+    "files",
+    "files.zip",
+    "Untitled.base",
+    "5. JOB PREP",
+    "2. MAP OF CONTENT/SKILLS HUB",
+    "1. HOME",
+    "4. BEYOND CORE",
+    "3.5. STATISTICS",
+    "3.2. STRUCTURED QUERY LANGUAGE",
+    "3.3. MICROSOFT POWER BI",
+    "Untitled.canvas"
+  ]
+}

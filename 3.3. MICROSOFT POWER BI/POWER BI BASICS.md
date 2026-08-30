@@ -1,0 +1,78 @@
+# Power BI Basics
+
+> The foundational Power BI workflow: connecting to data, understanding Desktop vs Service, and the basic building blocks of a report.
+
+## Overview
+
+Power BI is Microsoft's business intelligence platform for building interactive reports and dashboards. Unlike Excel, which is primarily calculation-driven, Power BI is built around a data model — data is imported, shaped, modeled, and then visualized, with each stage handled by a distinct part of the tool.
+
+## Why It Matters for a Data Analyst
+
+Power BI is one of the most widely requested BI tools in Data Analyst job postings, and it's how many organizations distribute self-service dashboards to stakeholders at scale — far beyond what a single Excel file can support.
+
+## Core Concepts
+
+- **Power BI Desktop** — the application used to build reports: connecting to data, transforming it, modeling relationships, and designing visuals
+- **Power BI Service** — the cloud platform used to publish, share, and collaborate on reports built in Desktop
+- **Report** — a collection of visual pages built from a data model
+- **Dataset** — the underlying data model powering one or more reports
+
+## Import vs DirectQuery
+
+| Aspect | Import | DirectQuery |
+|---|---|---|
+| Data storage | Copied into Power BI's own engine | Left in the source; queried live |
+| Performance | Generally faster once loaded | Depends on source database performance |
+| Data freshness | As of last refresh | Always current |
+| Data volume limits | Limited by available memory | Limited by source database capacity |
+| Best for | Most standard reporting scenarios | Very large or frequently changing datasets |
+
+## Data Sources
+
+Power BI connects to a wide range of sources: Excel files, CSVs, SQL databases, cloud data warehouses, APIs, and many other connectors. The choice of source and connection mode (Import vs DirectQuery) shapes the rest of the report-building process.
+
+## How It Works
+
+The typical Power BI workflow: connect to a data source → transform and clean data using Power Query → build relationships between tables in the data model → create measures and calculated columns with DAX → build visuals → publish to the Service → share with stakeholders.
+
+## Real-World Data Analyst Use Cases
+
+- Connecting to a company's sales database and building a live-refreshing sales dashboard
+- Combining data from multiple sources (a CRM export and a finance system) into a single unified report
+- Publishing a report to the Service so stakeholders can view it without needing Power BI Desktop installed
+
+## Common Mistakes
+
+- Choosing Import when data changes so frequently that stakeholders need real-time figures, without considering DirectQuery
+- Building visuals before the data model and relationships are properly set up, leading to rework later
+- Not understanding the difference between the Desktop file and the published report in the Service, causing confusion about which version is "live"
+
+## Best Practices
+
+- Default to Import mode unless data volume or freshness requirements specifically call for DirectQuery
+- Get the data model right before investing time in visuals — a well-structured model makes everything downstream easier
+- Keep source data connections documented, especially when a report combines multiple sources
+
+## Interview Perspective
+
+### Common Interview Questions
+- What's the difference between Power BI Desktop and Power BI Service?
+- When would you choose DirectQuery over Import mode?
+- Walk me through your typical Power BI workflow, start to finish.
+
+### What Interviewers Usually Test
+Whether the candidate understands Power BI as a full workflow (connect → model → visualize → publish), not just as a chart-building tool.
+
+### Common Traps
+Treating Power BI like Excel — jumping straight to visuals without first establishing a proper data model.
+
+## Practical Application
+
+Power BI Basics is the foundation for everything else in this section — see [[DATA MODELING]], [[DATA ANALYSIS EXPRESSIONS (DAX)]], and [[DASHBOARD DEVELOPMENT]] for how the workflow deepens from here.
+
+## Revision Summary
+
+- Power BI Desktop builds reports; Power BI Service publishes and shares them.
+- Import mode copies data in for speed; DirectQuery queries the source live for freshness.
+- The core workflow is connect → transform → model → visualize → publish.
+- A solid data model should come before visual design, not after.

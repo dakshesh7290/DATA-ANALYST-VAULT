@@ -1,0 +1,77 @@
+# Dashboard (Excel)
+
+> Building an interactive, at-a-glance summary of key metrics using PivotTables, charts, and slicers.
+
+## Overview
+
+An Excel dashboard combines KPI summaries, charts, and interactive filters (slicers) into a single view that lets stakeholders monitor a business area without needing to dig through raw data. Building a good dashboard is as much about design judgment as it is about Excel mechanics.
+
+## Why It Matters for a Data Analyst
+
+Dashboards are one of the most common deliverables an analyst produces — they turn one-off analysis into an ongoing, self-service monitoring tool for stakeholders.
+
+## Core Concepts
+
+- **KPI cards** — prominent single-number summaries of the most important metrics
+- **Charts** — visual representations of trends, comparisons, or breakdowns
+- **Slicers** — interactive filter buttons connected to PivotTables/PivotCharts
+- **Layout** — the visual arrangement of the dashboard's components
+
+## Data Preparation
+
+A dashboard is only as good as the data feeding it. This typically means: a clean, well-structured source table (often via Power Query), one or more PivotTables summarizing that data, and charts/KPI cards built from those PivotTables.
+
+## Dashboard Design Principles
+
+- Lead with the most important metric — don't bury it among secondary details
+- Group related metrics together visually
+- Use consistent color coding across the dashboard (e.g. always red for "below target")
+- Limit the number of charts on screen at once — a dashboard that requires scrolling defeats the purpose of an at-a-glance view
+
+## Interactivity
+
+Slicers connected to PivotTables let a stakeholder filter the entire dashboard (e.g. by region or time period) without needing to edit any formulas or ask the analyst to rebuild anything.
+
+## Real-World Data Analyst Use Cases
+
+- A sales dashboard showing revenue, units sold, and top products, filterable by region and month
+- An operations dashboard tracking key process metrics with red/yellow/green status indicators
+- A recurring weekly report replaced by a live, self-service dashboard
+
+## Common Mistakes
+
+- Building a dashboard before clearly defining which KPIs actually matter to the stakeholder
+- Overcrowding the dashboard with every possible metric instead of the handful that matter most
+- Using charts that don't match the data (e.g. a pie chart for a trend over time, where a line chart would be clearer)
+- Not testing that slicers correctly filter every connected PivotTable/chart
+
+## Best Practices
+
+- Define KPIs with the stakeholder before building anything
+- Keep the dashboard to a single screen where possible
+- Use consistent formatting and color logic throughout
+- Test the dashboard with sample filter combinations before sharing it
+
+## Interview Perspective
+
+### Common Interview Questions
+- Walk me through how you'd design a sales dashboard for a regional manager.
+- How do slicers work with PivotTables?
+- What makes a dashboard effective versus cluttered?
+
+### What Interviewers Usually Test
+Design judgment — whether the candidate thinks about the stakeholder's actual needs, not just Excel mechanics.
+
+### Common Traps
+Describing dashboard-building purely as a technical task ("I'd add a PivotTable and a chart") without addressing what the dashboard needs to communicate and to whom.
+
+## Practical Application
+
+Dashboards are frequently the final, most visible deliverable of an analyst's work — the piece stakeholders interact with directly and repeatedly.
+
+## Revision Summary
+
+- A dashboard combines KPI cards, charts, and slicers into one interactive summary view.
+- Good dashboard design starts with defining the KPIs that matter, not with building charts first.
+- Slicers connected to PivotTables provide self-service interactivity for stakeholders.
+- Avoid overcrowding — a dashboard should be scannable at a glance.

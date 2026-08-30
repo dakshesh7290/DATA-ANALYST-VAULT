@@ -1,0 +1,101 @@
+# Data Warehouse
+
+> How organizations structure large volumes of data specifically for analytical querying, and the schema concepts every analyst should recognize.
+
+## Overview
+
+A data warehouse is a system specifically designed and structured for analytical queries across large volumes of historical data — distinct from the transactional databases that power day-to-day applications. Understanding how data warehouses are structured helps an analyst write more effective queries and understand why data is organized the way it is.
+
+## Why a Data Analyst Should Understand This
+
+Much of an analyst's SQL querying happens directly against a data warehouse. Understanding its underlying structure (fact/dimension tables, schema design) makes it significantly easier to write correct, efficient queries and to understand a new data warehouse's structure quickly.
+
+## OLTP vs OLAP
+
+| Aspect | OLTP (Online Transaction Processing) | OLAP (Online Analytical Processing) |
+|---|---|---|
+| Purpose | Supports day-to-day operational transactions | Supports analytical queries across historical data |
+| Example system | An e-commerce application's order database | A data warehouse |
+| Typical query | Insert/update a single order | Aggregate millions of orders across time and category |
+| Optimized for | Fast, frequent small read/write operations | Fast, complex read queries across large datasets |
+
+Data warehouses are OLAP systems — optimized for the kind of large-scale aggregation and analysis a Data Analyst typically performs.
+
+## Fact Tables and Dimension Tables
+
+- **Fact table** — contains the measurable, quantitative data of interest (e.g. sales amount, quantity sold), along with keys linking to related dimension tables
+- **Dimension table** — contains descriptive attributes providing context for facts (e.g. product details, customer details, dates)
+
+**Example:** A `sales_fact` table might contain `order_id`, `product_id`, `customer_id`, `date_id`, and `amount`, while separate dimension tables (`dim_product`, `dim_customer`, `dim_date`) hold the descriptive details for each of those keys.
+
+## Star Schema vs Snowflake Schema
+
+| Aspect | Star Schema | Snowflake Schema |
+|---|---|---|
+| Structure | A central fact table connected directly to denormalized dimension tables | Dimension tables are further normalized into related sub-tables |
+| Query complexity | Simpler, fewer joins | More joins required |
+| Storage efficiency | Less efficient (some data duplication in dimensions) | More efficient (less duplication) |
+| Common use | Most common in modern analytical data warehouses, due to query simplicity | Used when storage efficiency or highly structured dimension hierarchies matter more |
+
+## ETL/ELT
+
+Data warehouses are populated through ETL or ELT processes — extracting data from source systems, transforming it into the warehouse's structure, and loading it in.
+
+## Data Marts
+
+A data mart is a smaller, more focused subset of a data warehouse, typically scoped to a specific department or business area (e.g. a marketing data mart), making it faster and simpler to query for that team's specific needs.
+
+## Data Lakes and the Data Lakehouse
+
+A data lake stores large volumes of raw data, often before it's structured into a warehouse's schema. A "data lakehouse" is a more recent architectural approach combining data lake storage flexibility with data-warehouse-like structure and query performance.
+
+## Slowly Changing Dimensions (Conceptual)
+
+Dimension data changes over time (a customer moves regions, a product's category is reclassified). "Slowly changing dimensions" refers to strategies for handling these changes — for example, whether to overwrite old values or preserve historical versions, which affects whether historical reports reflect a customer's region *at the time* of a sale or their *current* region.
+
+## Historical Data and Analytical Queries
+
+Data warehouses are typically optimized to store and efficiently query large volumes of historical data — supporting trend analysis and year-over-year comparisons that would be slow or impractical against a live transactional database.
+
+## BI Integration
+
+Data warehouses are typically the direct data source for BI tools like Power BI — the warehouse's structure (fact/dimension tables) often maps closely onto the data model an analyst builds in a BI tool.
+
+## Real-World Data Analyst Use Cases
+
+- Writing a query that joins a sales fact table with several dimension tables to build a category-level revenue report
+- Understanding why historical reports show a customer's region at time of purchase, due to how slowly changing dimensions were handled
+- Connecting a BI tool's data model directly to a data warehouse's existing star schema
+
+## Common Mistakes
+
+- Treating a data warehouse's dimension tables as if they always reflect current, up-to-date values, without checking how historical changes are handled
+- Joining fact and dimension tables incorrectly, leading to duplicated or missing rows
+- Confusing a data lake (raw, less structured) with a data warehouse (structured, query-optimized)
+
+## Best Practices
+
+- Learn the specific fact/dimension structure of your organization's data warehouse before writing complex queries against it
+- Understand how the warehouse handles slowly changing dimensions, since it affects how to interpret historical values correctly
+- Prefer querying a data warehouse over a live transactional database for large analytical queries, since it's specifically optimized for this purpose
+
+## Interview Relevance
+
+### Common Interview Questions
+- What's the difference between a fact table and a dimension table?
+- What's the difference between a star schema and a snowflake schema?
+- Why are data warehouses used instead of querying transactional databases directly for analysis?
+
+### What Interviewers Usually Test
+Whether the candidate understands the basic structure of the systems they'll actually be querying daily — this is one of the more commonly tested Beyond Core topics.
+
+## Relationship to the Core Data Analyst Workflow
+
+The data warehouse is often the primary data source underlying the "gather data" and "explore data" stages of the [[WORKFLOW]].
+
+## Revision Summary
+
+- Data warehouses are OLAP systems, optimized for large-scale analytical queries, unlike OLTP transactional databases.
+- Fact tables hold measurable data; dimension tables hold descriptive context, linked via keys.
+- Star schema is simpler and more common; snowflake schema is more normalized and storage-efficient.
+- Slowly changing dimensions determine whether historical reports reflect values as they were at the time, or as they currently are.
