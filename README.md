@@ -43,7 +43,7 @@ Home → Data Analyst (master MOC) → Skills Hub / Workflow / Beyond Core / Job
 ## Cloning This Vault
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/dakshesh7290/DATA-ANALYST-VAULT
 ```
 
 Open the cloned folder in Obsidian as a vault to get the full intended experience (links, graph view, navigation).
