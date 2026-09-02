@@ -1,0 +1,81 @@
+# Power Query in Excel
+
+> Importing, cleaning, and transforming data through a repeatable, refreshable set of steps rather than manual, one-off edits.
+
+## Overview
+
+Power Query is Excel's data transformation engine. Instead of manually cleaning data each time it's refreshed, an analyst records a sequence of transformation steps once, and Power Query reapplies them automatically every time the underlying data changes — turning a one-off cleaning task into a repeatable, refreshable process.
+
+## Why It Matters for a Data Analyst
+
+Manual cleaning (Find & Replace, deleting rows by hand) has to be redone every time new data arrives. Power Query captures the cleaning logic as a set of steps, so refreshing the data re-runs the entire process automatically — a significant time saver for any recurring report.
+
+## Core Concepts
+
+- **Query** — a saved sequence of transformation steps applied to a data source
+- **Applied Steps** — the ordered list of transformations recorded for a query, each editable and reorderable
+- **Data source** — where the query pulls from (a file, a database, a folder of files, etc.)
+- **Refresh** — re-running the query's steps against the current state of the source data
+
+## Power Query vs Traditional Excel Cleaning
+
+| Aspect | Power Query | Manual/Formula Cleaning |
+|---|---|---|
+| Repeatability | Fully repeatable via refresh | Must be redone manually each time |
+| Auditability | Every step is visible and editable | Often scattered across formulas |
+| Performance on large data | Generally better | Can slow down with heavy formula use |
+| Learning curve | Moderate — a distinct interface/language (M) | Lower for simple cases |
+
+## Common Transformations
+
+- **Importing data** — from Excel files, CSVs, folders, databases, or web sources
+- **Removing duplicates**
+- **Handling missing values** — replacing, filtering, or filling
+- **Splitting columns** — e.g. splitting a full name into first/last name
+- **Merging queries** — joining two data sources, similar to a SQL join
+- **Appending queries** — stacking multiple sources with the same structure, similar to SQL `UNION`
+- **Grouping** — aggregating data by category, similar to SQL `GROUP BY`
+- **Pivot/unpivot** — reshaping data between wide and long formats
+- **Changing data types** — ensuring columns are correctly typed as text, number, or date
+
+## Real-World Data Analyst Use Cases
+
+- Importing monthly sales exports from a folder and combining them into a single clean table automatically
+- Joining a sales table with a product lookup table via Merge Queries
+- Reshaping survey data from wide format (one column per question) to long format for analysis
+
+## Common Mistakes
+
+- Making manual edits after loading data into Excel instead of adding the step to the query itself, breaking the "refreshable" benefit
+- Not naming or documenting query steps, making a complex query hard to audit later
+- Choosing the wrong join type when merging queries, silently dropping or duplicating rows
+
+## Best Practices
+
+- Do all cleaning inside Power Query, not after loading the data into the worksheet
+- Rename steps descriptively rather than leaving Power Query's auto-generated names
+- Change data types explicitly early in the query, rather than relying on defaults
+
+## Interview Perspective
+
+### Common Interview Questions
+- How does Power Query differ from manually cleaning data in Excel?
+- How would you combine several monthly CSV exports into one table automatically?
+- What's the difference between merging and appending queries?
+
+### What Interviewers Usually Test
+Whether the candidate understands *why* a repeatable transformation process matters for recurring reporting, not just the mechanics.
+
+### Common Traps
+Confusing "Merge" (joining columns from different tables) with "Append" (stacking rows from similar tables) — a common source of incorrect output.
+
+## Practical Application
+
+Power Query is what makes a recurring Excel report sustainable — instead of manually recleaning data every reporting period, the analyst refreshes the query and the whole process reruns automatically.
+
+## Revision Summary
+
+- Power Query records transformation steps once and reapplies them automatically on refresh.
+- It performs Excel-native equivalents of SQL operations: merge (join), append (union), group (GROUP BY).
+- All cleaning should happen inside the query, not after loading into the worksheet, to preserve repeatability.
+- Choosing the correct merge/join type matters — the wrong type silently drops or duplicates data.

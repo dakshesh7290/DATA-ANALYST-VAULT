@@ -1,0 +1,75 @@
+# Cloud Architecture
+
+> The basic components of a cloud data environment, and how analysts interact with each layer.
+
+## Overview
+
+Cloud architecture refers to how the various components of a cloud-based system — storage, compute, databases, networking, security — fit together. For a Data Analyst, understanding this at a conceptual level clarifies where data actually lives and how it moves through the systems an analyst ultimately queries.
+
+## Why a Data Analyst Should Understand This
+
+Even though analysts don't typically design cloud architecture, understanding its basic layers helps make sense of terms colleagues (especially Data Engineers) use regularly, and clarifies why data might be structured or accessed in a particular way.
+
+## How It Relates to Analytics
+
+The data warehouse or database an analyst queries is just one layer of a broader cloud architecture — understanding the surrounding layers (storage, compute, security) provides useful context for troubleshooting and communication.
+
+## Core Components
+
+- **Compute** — the processing power used to run queries, transformations, and applications
+- **Storage** — where raw and processed data physically resides
+- **Databases** — structured systems for storing and querying data, including transactional databases used by applications
+- **Data warehouses** — systems specifically optimized for analytical queries across large volumes of historical data (see [[DATA WAREHOUSE]])
+- **Data lakes** — storage systems that hold large volumes of raw, often unstructured or semi-structured data, typically before it's transformed for analysis
+- **Networking (conceptually)** — how systems communicate with each other and with users, including considerations like data transfer speed and security boundaries
+- **Security** — controls protecting data from unauthorized access
+- **IAM (Identity and Access Management)** — the system controlling who can access which resources and what they're allowed to do with them
+- **ETL/ELT** — the processes moving and transforming data between systems
+- **BI layer** — the reporting and visualization tools (like Power BI) that sit on top of the underlying data infrastructure
+
+## How Analysts Interact With Cloud Architectures
+
+An analyst typically interacts directly with the BI layer and the data warehouse/database layer — writing queries, building dashboards — while layers like compute provisioning, raw storage management, and networking configuration are usually handled by Data Engineers or IT/infrastructure teams.
+
+## Major Cloud Platforms (Examples)
+
+Common cloud platforms an analyst may encounter include **AWS (Amazon Web Services)**, **Microsoft Azure**, and **Google Cloud Platform (GCP)**. Each offers its own versions of data warehousing, storage, and analytics services, though the underlying concepts (compute, storage, IAM, data warehouse) are broadly consistent across all three.
+
+## Real-World Data Analyst Use Cases
+
+- Understanding why a query against a data warehouse behaves differently than a query against a live transactional database
+- Recognizing IAM-related terminology when access to a data source needs to be requested or troubleshot
+- Understanding where in the architecture a specific dataset lives, when trying to track down why data looks unexpected
+
+## Common Mistakes
+
+- Assuming all data an organization holds is immediately query-ready, without understanding that raw data often needs to move through several architectural layers first
+- Confusing a data lake (raw, less structured) with a data warehouse (structured, analysis-ready)
+- Underestimating the role of IAM/security in why access to certain data might be restricted
+
+## Best Practices
+
+- Learn the basic architecture of your own organization's specific cloud setup, even at a high level — it clarifies a lot of day-to-day questions
+- Ask Data Engineers for context when a data source's structure or access pattern is unclear, rather than guessing
+- Understand the distinction between a data lake and a data warehouse, since this affects how "ready" a given dataset actually is for analysis
+
+## Interview Relevance
+
+### Common Interview Questions
+- What's the difference between a data lake and a data warehouse?
+- What cloud platforms are you familiar with, even at a conceptual level?
+- How does IAM relate to a Data Analyst's access to data?
+
+### What Interviewers Usually Test
+General conceptual literacy — whether the candidate can hold an informed conversation about cloud infrastructure, not detailed platform-specific expertise.
+
+## Relationship to the Core Data Analyst Workflow
+
+Cloud architecture underlies the "gather data" stage of the [[WORKFLOW]] — it's the infrastructure context behind wherever an analyst's data actually comes from.
+
+## Revision Summary
+
+- Core cloud architecture components: compute, storage, databases, data warehouses, data lakes, networking, security, IAM.
+- Data lakes hold raw/less-structured data; data warehouses hold structured, analysis-ready data.
+- Analysts primarily interact with the BI layer and data warehouse/database layer, not the underlying infrastructure directly.
+- Major cloud platforms (AWS, Azure, GCP) share broadly similar underlying concepts despite different specific tools.

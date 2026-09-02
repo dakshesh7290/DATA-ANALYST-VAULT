@@ -1,0 +1,73 @@
+# AI Basics
+
+> The core AI concepts a Data Analyst should understand — not to build AI systems, but to use and reason about them competently.
+
+## Overview
+
+Artificial Intelligence has moved from a specialized field to a tool analysts interact with daily, whether through AI-assisted coding, chatbots, or AI features embedded directly in BI tools. This note covers the foundational concepts needed to use AI intelligently and speak about it accurately, without turning into a machine learning course.
+
+## Why It Matters for a Data Analyst
+
+Analysts increasingly work alongside AI tools for writing queries, cleaning data, and summarizing findings. Understanding basic AI terminology and distinctions helps an analyst use these tools appropriately and communicate clearly about their capabilities and limitations.
+
+## Core Concepts
+
+- **Artificial Intelligence (AI)** — the broad field of building systems that perform tasks normally requiring human intelligence
+- **Machine Learning (ML)** — a subset of AI where systems learn patterns from data rather than following explicitly programmed rules
+- **Deep Learning** — a subset of machine learning using multi-layered neural networks, especially effective for complex, unstructured data like images or text
+- **Generative AI** — AI systems that produce new content (text, images, code) rather than just classifying or predicting from existing categories
+- **Large Language Models (LLMs)** — a type of generative AI trained on large amounts of text, capable of understanding and generating human-like language
+- **NLP (Natural Language Processing)** — the field focused on enabling computers to understand and work with human language
+- **Computer Vision** — the field focused on enabling computers to interpret visual information (images, video)
+- **Predictive AI** — AI focused on forecasting future outcomes based on historical data, closely related to traditional statistical modeling
+
+## Generative AI vs Traditional Machine Learning
+
+| Aspect | Traditional ML | Generative AI |
+|---|---|---|
+| Typical task | Classify or predict from a fixed set of outcomes | Generate new content (text, images, code) |
+| Example | Predicting whether a customer will churn | Writing a summary of a report |
+| Output type | A label, score, or number | Novel, often unstructured content |
+| Relevant Data Analyst use | Predictive modeling (typically a Data Scientist task) | Writing, summarizing, coding assistance |
+
+## Real-World Data Analyst Use Cases
+
+- Using an LLM-based tool to draft or debug a SQL query
+- Using a generative AI tool to summarize a lengthy report into key takeaways
+- Understanding, at a conceptual level, how a predictive model a Data Scientist built actually works, to better communicate its results
+
+## Common Mistakes
+
+- Using "AI" and "machine learning" interchangeably as if they mean exactly the same thing
+- Assuming generative AI output is always factually accurate — it should be verified, not trusted blindly
+- Overestimating what current AI tools can reliably do with genuinely novel or highly specific business context they weren't given
+
+## Best Practices
+
+- Understand the basic distinction between AI, ML, and generative AI well enough to use each term accurately
+- Treat AI-generated output as a draft or starting point requiring verification, not a finished, trustworthy answer
+- Stay aware that AI tool capabilities are evolving quickly — a limitation observed once may not hold indefinitely
+
+## Interview Perspective
+
+### Common Interview Questions
+- What's the difference between AI and machine learning?
+- What is generative AI, and how does it differ from traditional predictive modeling?
+- How would you evaluate whether an AI-generated analysis is trustworthy?
+
+### What Interviewers Usually Test
+Basic conceptual clarity — whether the candidate can distinguish these terms accurately, since they're often used loosely or incorrectly in casual conversation.
+
+### Common Traps
+Using "AI" as a vague catch-all term without being able to explain what specific type of AI (ML, generative AI, etc.) is actually relevant to a given scenario.
+
+## Practical Application
+
+AI Basics provides the conceptual foundation for [[AI TOOLS USAGE]] and [[PROMPT ENGINEERING]] — using these tools well starts with understanding, even at a basic level, what they actually are and aren't doing.
+
+## Revision Summary
+
+- AI is the broad field; Machine Learning is a subset that learns from data; Deep Learning is a subset of ML using neural networks.
+- Generative AI produces new content; traditional ML typically classifies or predicts from a fixed set of outcomes.
+- AI-generated output should be treated as a draft requiring verification, not an automatically trustworthy final answer.
+- Understanding these terms accurately helps analysts communicate clearly about AI's role in their work.

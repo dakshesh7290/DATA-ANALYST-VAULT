@@ -1,0 +1,22 @@
+# Artificial Intelligence
+
+> Using AI tools to support and speed up analyst work — coding help, summarization, and automation — with the judgment to verify their output.
+
+## What It Is
+
+A broad field of computing systems that perform tasks normally requiring human intelligence; for analysts, most relevant in the form of AI assistants and generative AI tools built into everyday software.
+
+## What It Does
+
+Helps draft or debug SQL/Python/formulas, summarize long reports, brainstorm data cleaning approaches, and support automation of repetitive tasks — acting as a productivity aid rather than a replacement for analytical judgment.
+
+## When It's Used
+
+- Getting a first-draft SQL query or Python script from a plain-language description
+- Summarizing a long report or dataset's findings quickly
+- Getting unstuck while debugging code or a formula
+- Supporting (not fully replacing) automation of repetitive analyst tasks
+
+## Sub-Topics in This Section
+
+[[AI BASICS]] · [[AI TOOLS USAGE]] · [[AI-ASSISTED AUTOMATION]] · [[PROMPT ENGINEERING]]

@@ -1,0 +1,94 @@
+# Excel Basics
+
+> The foundational Excel skills every Data Analyst uses daily: navigating the interface, entering and formatting data, and using core formulas.
+
+## Overview
+
+Excel remains one of the most widely used tools in business, and for a Data Analyst it's often the fastest way to explore a small-to-medium dataset, build a quick report, or sanity-check output from SQL or Python. This note covers the essentials: the interface, data entry and formatting, and the core formulas every analyst should know before moving to more advanced topics.
+
+## Why It Matters for a Data Analyst
+
+Even analysts who work primarily in SQL or Python still use Excel constantly — for quick ad hoc analysis, for sharing results with non-technical stakeholders who expect a spreadsheet, and for lightweight reporting where a full BI tool would be overkill.
+
+## Core Concepts
+
+- **Workbook** — the Excel file itself, containing one or more sheets
+- **Worksheet (sheet)** — a single grid of cells within a workbook
+- **Cell reference** — identifies a cell by column letter and row number (e.g. `B4`)
+- **Relative vs absolute references** — `A1` shifts when copied to another cell; `$A$1` stays fixed
+- **Ranges** — a group of cells, e.g. `A1:A10`
+- **Data types** — text, numbers, dates, and booleans, each affecting how formulas and formatting behave
+
+## How It Works
+
+Excel is a grid-based calculation engine. Cells can hold raw values or formulas that reference other cells; when a referenced cell changes, every formula depending on it recalculates automatically. This is what makes Excel useful for quick, live analysis rather than static reporting.
+
+## When to Use It
+
+- Quick, one-off analysis on small-to-medium datasets
+- Sharing analysis with stakeholders who expect a spreadsheet
+- Lightweight reporting that doesn't justify building a full dashboard
+- Sanity-checking output from SQL or Python before trusting it
+
+## Core Formulas Every Analyst Should Know
+
+| Formula | Purpose |
+|---|---|
+| `=SUM(range)` | Adds a range of numbers |
+| `=AVERAGE(range)` | Calculates the mean |
+| `=COUNT(range)` | Counts numeric cells |
+| `=COUNTA(range)` | Counts non-empty cells |
+| `=COUNTIF(range, criteria)` | Counts cells matching a condition |
+| `=SUMIF(range, criteria, sum_range)` | Sums cells matching a condition |
+| `=IF(condition, value_if_true, value_if_false)` | Conditional logic |
+| `=CONCATENATE(text1, text2)` or `&` | Combines text |
+
+## Real-World Data Analyst Use Cases
+
+- Building a quick summary table of monthly sales by region using `SUMIF`
+- Flagging records that meet a condition (e.g. orders over a threshold) using `IF`
+- Counting how many customers fall into each category using `COUNTIF`
+
+## Examples
+
+To sum sales only for the "East" region:
+```
+=SUMIF(B:B, "East", C:C)
+```
+Where column B holds region names and column C holds sales values.
+
+## Common Mistakes
+
+- Using absolute references (`$A$1`) where relative references were intended, or vice versa, causing formulas to break when copied
+- Treating numbers stored as text (common after importing from other systems) as if they were numeric — `SUM` will silently ignore them
+- Not checking for hidden rows/filters skewing visible totals
+
+## Best Practices
+
+- Keep raw data on one sheet and calculations/summaries on another
+- Use named ranges for values referenced in many formulas
+- Format dates and numbers explicitly rather than relying on Excel's auto-detection
+
+## Interview Perspective
+
+### Common Interview Questions
+- What's the difference between a relative and an absolute reference?
+- How would you count the number of orders above $500 in a column?
+- What's the difference between `COUNT` and `COUNTA`?
+
+### What Interviewers Usually Test
+Whether the candidate has genuine hands-on fluency, not just formula memorization — often assessed by asking how they'd solve a described scenario.
+
+### Common Traps
+Confusing `SUM` with `SUMIF`/`SUMIFS` when a condition is involved, or forgetting that text-formatted numbers won't sum correctly.
+
+## Practical Application
+
+Excel Basics underlies every other Excel topic in this vault — [[ADVANCED FORMULAS]], [[LOOKUP FUNCTIONS]], and [[PIVOT TABLES & CHARTS]] all build on the concepts introduced here.
+
+## Revision Summary
+
+- Excel calculates live: formulas recalculate automatically when referenced cells change.
+- Relative references shift when copied; absolute references (`$`) stay fixed.
+- `SUMIF`/`COUNTIF` are the most common conditional formulas an analyst uses day to day.
+- Watch for numbers stored as text — a frequent, silent source of incorrect totals.

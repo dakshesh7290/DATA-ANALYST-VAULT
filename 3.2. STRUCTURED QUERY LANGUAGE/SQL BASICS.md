@@ -1,0 +1,112 @@
+# SQL Basics
+
+> The foundational SQL every Data Analyst uses to retrieve, filter, and sort data directly from a database.
+
+## Overview
+
+SQL (Structured Query Language) is how analysts communicate with databases — retrieving exactly the data needed for a given question, without exporting entire tables. It is arguably the single most important technical skill for a Data Analyst, since so much business data lives in relational databases.
+
+## Why It Matters for a Data Analyst
+
+Unlike Excel, which requires data to already be extracted into a file, SQL lets an analyst query data directly at its source — often much larger than what Excel can handle, and always more current.
+
+## Core Concepts
+
+- **Database** — an organized collection of tables
+- **Table** — a structured set of rows and columns, similar to a spreadsheet
+- **Query** — a request for specific data, written in SQL
+- **NULL** — represents a missing or unknown value, distinct from zero or an empty string
+
+## Core Clauses
+
+| Clause | Purpose |
+|---|---|
+| `SELECT` | Specifies which columns to return |
+| `FROM` | Specifies which table to query |
+| `WHERE` | Filters rows based on a condition |
+| `ORDER BY` | Sorts the result set |
+| `DISTINCT` | Removes duplicate rows from the result |
+| `LIMIT` / `TOP` | Restricts the number of rows returned (dialect-dependent) |
+| `CASE` | Adds conditional logic within a query |
+
+## How It Works
+
+A SQL query is processed conceptually in this order: `FROM` (identify the table) → `WHERE` (filter rows) → `SELECT` (choose columns) → `ORDER BY` (sort). Note this differs from the order the clauses are written in — `SELECT` appears first in the query text but is logically evaluated after filtering.
+
+## Examples
+
+Basic retrieval:
+```sql
+SELECT customer_id, order_date, amount
+FROM orders
+WHERE amount > 100
+ORDER BY order_date DESC;
+```
+
+Using `CASE` for conditional logic:
+```sql
+SELECT order_id,
+       CASE WHEN amount > 500 THEN 'High'
+            WHEN amount > 100 THEN 'Medium'
+            ELSE 'Low'
+       END AS order_tier
+FROM orders;
+```
+
+Handling NULLs explicitly:
+```sql
+SELECT customer_id, region
+FROM customers
+WHERE region IS NULL;
+```
+
+## Aliases
+
+Aliases give a column or table a temporary name for the duration of the query, improving readability:
+```sql
+SELECT o.order_id, c.customer_name
+FROM orders AS o
+JOIN customers AS c ON o.customer_id = c.customer_id;
+```
+
+## Real-World Data Analyst Use Cases
+
+- Pulling only the relevant columns and date range for a specific analysis, rather than exporting an entire table
+- Filtering out test or cancelled orders before analysis
+- Sorting customers by total spend to identify top accounts
+
+## Common Mistakes
+
+- Using `=` to compare against `NULL` (`WHERE region = NULL`) — this never returns true; `IS NULL` must be used instead
+- Forgetting `DISTINCT` when counting unique values, leading to inflated counts
+- Assuming `LIMIT`/`TOP` syntax is identical across all databases — it varies by dialect (e.g. `LIMIT` in MySQL/PostgreSQL vs `TOP` in SQL Server)
+
+## Best Practices
+
+- Select only the columns needed, not `SELECT *`, especially on large tables
+- Filter as early as possible (in `WHERE`) rather than pulling everything and filtering later elsewhere
+- Use clear aliases, especially when joining multiple tables
+
+## Interview Perspective
+
+### Common Interview Questions
+- What is the logical order of execution for a SQL query?
+- How do you filter for NULL values correctly?
+- What's the difference between `WHERE` and filtering after the query returns data in a tool like Excel?
+
+### What Interviewers Usually Test
+Whether the candidate understands NULL handling and query execution order — both are common sources of subtle bugs.
+
+### Common Traps
+Writing `WHERE column = NULL` instead of `WHERE column IS NULL`.
+
+## Practical Application
+
+SQL Basics underlies every other SQL topic in this vault — see [[JOINS]], [[GROUP BY & AGGREGATIONS]], and [[EXPLORATORY DATA ANALYSIS USING SQL]] for how these fundamentals extend into more complex analysis.
+
+## Revision Summary
+
+- SQL queries are logically evaluated `FROM` → `WHERE` → `SELECT` → `ORDER BY`, though written in a different order.
+- `NULL` must be tested with `IS NULL`/`IS NOT NULL`, never `=`.
+- `LIMIT`/`TOP` syntax differs by database dialect.
+- Filter early and select only needed columns for both clarity and performance.

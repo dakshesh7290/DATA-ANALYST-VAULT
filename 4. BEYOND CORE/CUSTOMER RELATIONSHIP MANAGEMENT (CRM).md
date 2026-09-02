@@ -1,0 +1,86 @@
+# Customer Relationship Management (CRM)
+
+> How CRM systems store customer and sales data, and why they're one of the most common data sources for business analysis.
+
+## Overview
+
+A CRM (Customer Relationship Management) system stores and organizes information about a company's interactions with current and potential customers — contacts, sales opportunities, communication history, and more. For a Data Analyst, CRM systems are frequently a primary source of the data behind sales, marketing, and customer analysis.
+
+## Why a Data Analyst Should Understand This
+
+CRM data directly feeds many of the most common analyst deliverables — sales pipeline reports, customer segmentation, marketing attribution. Understanding how CRM systems structure this data helps an analyst work with it more effectively and spot data quality issues specific to CRM environments.
+
+## How It Relates to Analytics
+
+CRM systems are usually optimized for the sales/customer-facing teams that use them daily, not for analysis — which means CRM data often needs meaningful cleaning and restructuring before it's ready for deeper analytical use.
+
+## Why Companies Use CRM Systems
+
+CRMs centralize customer information that would otherwise be scattered across emails, spreadsheets, and individual employees' memory — supporting sales tracking, customer service, and marketing efforts from a single, shared system.
+
+## Core Concepts
+
+- **Customer data** — core information about a customer or account (contact details, company information, history)
+- **Leads** — potential customers who have shown some interest but haven't yet become paying customers
+- **Opportunities** — active, in-progress potential sales deals being tracked through a sales process
+- **Accounts** — often used to represent a company or organization a business is engaging with, as distinct from individual contacts within it
+- **Contacts** — individual people associated with an account or lead
+- **Sales pipeline** — the staged process a lead or opportunity moves through on its way to becoming a closed sale
+- **Customer lifecycle** — the stages a customer moves through, from initial lead to active customer to potentially churned
+
+## CRM Analytics
+
+Common analyses built on CRM data include: conversion rates between pipeline stages, average deal size, sales cycle length, lead source effectiveness, and customer churn patterns.
+
+## KPIs Commonly Derived from CRM Data
+
+- Win rate (percentage of opportunities that convert to closed sales)
+- Average deal size
+- Sales cycle length
+- Lead-to-opportunity conversion rate
+- Customer lifetime value (often combining CRM data with transactional data)
+
+## Data Quality Issues Common in CRM Systems
+
+- Duplicate contact or account records, often created by different sales reps
+- Inconsistent or missing data entry, since CRM data is typically entered manually by sales/customer-facing staff
+- Stale pipeline stages, where an opportunity hasn't been updated to reflect its actual current status
+
+## Real-World Data Analyst Use Cases
+
+- Building a sales pipeline dashboard showing conversion rates at each stage
+- Analyzing which lead sources produce the highest-quality (most likely to convert) leads
+- Identifying and helping clean duplicate customer records before a broader customer analysis
+
+## Common Mistakes
+
+- Assuming CRM data is clean and consistent without checking, given it's typically entered manually
+- Not accounting for stale or outdated pipeline stages when analyzing sales velocity or forecasting
+- Treating "lead" and "opportunity" as interchangeable when they represent different stages of the customer lifecycle
+
+## Best Practices
+
+- Always check for duplicate records before analysis, especially for anything counting unique customers or accounts
+- Cross-reference pipeline stage timestamps to identify potentially stale or inaccurate records
+- Understand the specific CRM's data model (field names, stage definitions) before analyzing, since these vary by platform and company configuration
+
+## Interview Relevance
+
+### Common Interview Questions
+- What kinds of data quality issues are common in CRM systems, and why?
+- What's the difference between a lead and an opportunity?
+- How would you analyze sales pipeline conversion rates using CRM data?
+
+### What Interviewers Usually Test
+Awareness that CRM data requires specific data quality scrutiny due to its manual entry nature, and basic familiarity with sales/customer lifecycle terminology.
+
+## Relationship to the Core Data Analyst Workflow
+
+CRM is frequently a data source feeding the "gather data" stage of the [[WORKFLOW]], particularly for sales, marketing, and customer-focused analysis.
+
+## Revision Summary
+
+- CRM systems centralize customer, lead, and sales pipeline data, typically entered manually by sales/customer-facing teams.
+- Common CRM analytics: pipeline conversion rates, deal size, sales cycle length, lead source effectiveness.
+- CRM data quality issues (duplicates, inconsistent entry, stale stages) are common and should always be checked before analysis.
+- Leads, opportunities, accounts, and contacts represent different, distinct parts of the customer lifecycle.

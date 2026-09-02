@@ -1,0 +1,89 @@
+# Descriptive Statistics
+
+> Summarizing a dataset's central tendency, spread, and shape — the foundation every other statistical technique builds on.
+
+## Overview
+
+Descriptive statistics summarize what a dataset looks like: where its values center, how spread out they are, and whether they're skewed or contain outliers. This is usually the first quantitative step in understanding any new dataset, before any hypothesis testing or modeling.
+
+## Why It Matters for a Data Analyst
+
+Before comparing groups or testing a hypothesis, an analyst needs a clear picture of the data itself. Descriptive statistics are also often the actual deliverable — "average order value" or "median household income" are descriptive statistics stakeholders act on directly.
+
+## Core Concepts
+
+### Central Tendency
+- **Mean** — the arithmetic average; sensitive to outliers
+- **Median** — the middle value when sorted; robust to outliers
+- **Mode** — the most frequently occurring value; useful for categorical data
+
+### Dispersion
+- **Range** — the difference between the maximum and minimum values
+- **Variance** — the average squared deviation from the mean
+- **Standard deviation** — the square root of variance, in the same units as the original data
+- **Percentiles** — the value below which a given percentage of the data falls
+- **Quartiles** — the 25th, 50th, and 75th percentiles, dividing data into four equal parts
+- **IQR (Interquartile Range)** — the range between the 25th and 75th percentiles, commonly used to identify outliers
+
+### Shape
+- **Skewness** — a measure of asymmetry in the distribution (right-skewed: a long tail toward higher values; left-skewed: a long tail toward lower values)
+- **Outliers** — values unusually far from the rest of the data, often flagged using the IQR
+
+## Mean vs Median
+
+| Aspect | Mean | Median |
+|---|---|---|
+| Sensitive to outliers | Yes | No |
+| Best for | Symmetric distributions without extreme outliers | Skewed distributions or data with outliers |
+| Example | Average salary (can be skewed by a few very high earners) | Median salary (better represents the "typical" salary) |
+
+## Identifying Outliers Using IQR
+
+```
+IQR = Q3 - Q1
+Lower bound = Q1 - 1.5 × IQR
+Upper bound = Q3 + 1.5 × IQR
+```
+Values outside these bounds are commonly flagged as potential outliers.
+
+## Real-World Data Analyst Use Cases
+
+- Reporting average and median order value to give stakeholders a fuller picture than either number alone
+- Using standard deviation to describe how consistent or variable a metric is across time or segments
+- Flagging outlier transactions using the IQR method before further analysis
+
+## Common Mistakes
+
+- Reporting only the mean when the data is heavily skewed, giving a misleading picture of the "typical" value
+- Treating every outlier as an error to be removed, without investigating whether it's a legitimate, meaningful data point
+- Confusing standard deviation (a measure of spread) with standard error (a measure of estimate precision, relevant in inferential statistics)
+
+## Best Practices
+
+- Report both mean and median for skewed data, or default to median plus a note about skew
+- Always check for outliers before reporting summary statistics on a new dataset
+- Pair numeric summaries with a visualization (histogram, box plot) — numbers alone can hide the actual shape of the data
+
+## Interview Perspective
+
+### Common Interview Questions
+- When would you use median instead of mean?
+- How would you identify outliers in a dataset?
+- What does a high standard deviation tell you about a dataset?
+
+### What Interviewers Usually Test
+Whether the candidate understands *when* each statistic is appropriate, not just how to calculate it.
+
+### Common Traps
+Reporting a single summary statistic (usually the mean) as if it fully describes a skewed distribution.
+
+## Practical Application
+
+Descriptive statistics underpin essentially every other statistical technique in this section and are often the very first calculations performed on any new dataset.
+
+## Revision Summary
+
+- Mean is sensitive to outliers; median is robust to them — report both for skewed data.
+- Standard deviation and IQR both describe spread; IQR is more robust and commonly used to flag outliers.
+- Skewness describes asymmetry in a distribution's shape.
+- Always pair summary statistics with a visualization to catch what numbers alone might hide.
