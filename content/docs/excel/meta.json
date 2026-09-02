@@ -1,0 +1,4 @@
+{
+  "title": "Microsoft Excel",
+  "pages": ["excel-basics", "advanced-formulas", "lookup-functions", "pivot-tables-charts", "data-cleaning-using-excel", "conditional-formatting", "dashboard-in-excel", "power-query-in-excel", "excel-automation-vba-basics-macros"]
+}

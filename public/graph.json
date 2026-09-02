@@ -1,0 +1,788 @@
+{
+  "nodes": [
+    {
+      "id": "/docs/ai/ai-assisted-automation",
+      "title": "Ai-assisted Automation",
+      "url": "/docs/ai/ai-assisted-automation"
+    },
+    {
+      "id": "/docs/ai/ai-basics",
+      "title": "AI Basics",
+      "url": "/docs/ai/ai-basics"
+    },
+    {
+      "id": "/docs/ai/ai-tools-usage",
+      "title": "AI Tools Usage",
+      "url": "/docs/ai/ai-tools-usage"
+    },
+    {
+      "id": "/docs/ai/prompt-engineering",
+      "title": "Prompt Engineering",
+      "url": "/docs/ai/prompt-engineering"
+    },
+    {
+      "id": "/docs/beyond-core/application-programming-interfaces-apis",
+      "title": "Application Programming Interfaces (APIS)",
+      "url": "/docs/beyond-core/application-programming-interfaces-apis"
+    },
+    {
+      "id": "/docs/map-of-content/workflow",
+      "title": "Workflow",
+      "url": "/docs/map-of-content/workflow"
+    },
+    {
+      "id": "/docs/beyond-core/cloud-architecture",
+      "title": "Cloud Architecture",
+      "url": "/docs/beyond-core/cloud-architecture"
+    },
+    {
+      "id": "/docs/beyond-core/data-warehouse",
+      "title": "Data Warehouse",
+      "url": "/docs/beyond-core/data-warehouse"
+    },
+    {
+      "id": "/docs/beyond-core/cloud-migration",
+      "title": "Cloud Migration",
+      "url": "/docs/beyond-core/cloud-migration"
+    },
+    {
+      "id": "/docs/beyond-core/customer-relationship-management-crm",
+      "title": "Customer Relationship Management (CRM)",
+      "url": "/docs/beyond-core/customer-relationship-management-crm"
+    },
+    {
+      "id": "/docs/beyond-core/extract-transform-load-etl",
+      "title": "Extract, Transform, Load (ETL)",
+      "url": "/docs/beyond-core/extract-transform-load-etl"
+    },
+    {
+      "id": "/docs/beyond-core/git-github",
+      "title": "Git & Github",
+      "url": "/docs/beyond-core/git-github"
+    },
+    {
+      "id": "/docs/excel/advanced-formulas",
+      "title": "Advanced Formulas",
+      "url": "/docs/excel/advanced-formulas"
+    },
+    {
+      "id": "/docs/excel/conditional-formatting",
+      "title": "Conditional Formatting",
+      "url": "/docs/excel/conditional-formatting"
+    },
+    {
+      "id": "/docs/excel/dashboard-in-excel",
+      "title": "Dashboard in Excel",
+      "url": "/docs/excel/dashboard-in-excel"
+    },
+    {
+      "id": "/docs/excel/data-cleaning-using-excel",
+      "title": "Data Cleaning using Excel",
+      "url": "/docs/excel/data-cleaning-using-excel"
+    },
+    {
+      "id": "/docs/excel/excel-automation-vba-basics-macros",
+      "title": "Excel Automation (VBA Basics & Macros)",
+      "url": "/docs/excel/excel-automation-vba-basics-macros"
+    },
+    {
+      "id": "/docs/excel/excel-basics",
+      "title": "Excel Basics",
+      "url": "/docs/excel/excel-basics"
+    },
+    {
+      "id": "/docs/excel/lookup-functions",
+      "title": "Lookup Functions",
+      "url": "/docs/excel/lookup-functions"
+    },
+    {
+      "id": "/docs/excel/pivot-tables-charts",
+      "title": "Pivot Tables & Charts",
+      "url": "/docs/excel/pivot-tables-charts"
+    },
+    {
+      "id": "/docs/excel/power-query-in-excel",
+      "title": "Power Query in Excel",
+      "url": "/docs/excel/power-query-in-excel"
+    },
+    {
+      "id": "/docs/home/data-analyst-vault",
+      "title": "Data Analyst Vault",
+      "url": "/docs/home/data-analyst-vault"
+    },
+    {
+      "id": "/docs/map-of-content/data-analyst",
+      "title": "Data Analyst",
+      "url": "/docs/map-of-content/data-analyst"
+    },
+    {
+      "id": "/docs/how-to-use-the-vault",
+      "title": "How to Use the Vault",
+      "url": "/docs/how-to-use-the-vault"
+    },
+    {
+      "id": "/docs/map-of-content/data-job-profiles-comparison",
+      "title": "Data Job Profiles Comparison",
+      "url": "/docs/map-of-content/data-job-profiles-comparison"
+    },
+    {
+      "id": "/docs/map-of-content/beyond-core",
+      "title": "Beyond Core",
+      "url": "/docs/map-of-content/beyond-core"
+    },
+    {
+      "id": "/docs/map-of-content/job-prep",
+      "title": "Job Prep",
+      "url": "/docs/map-of-content/job-prep"
+    },
+    {
+      "id": "/docs/job-prep/top-100-questions",
+      "title": "Top 100 Questions",
+      "url": "/docs/job-prep/top-100-questions"
+    },
+    {
+      "id": "/docs/job-prep/top-20-projects",
+      "title": "Top 20 Projects",
+      "url": "/docs/job-prep/top-20-projects"
+    },
+    {
+      "id": "/docs",
+      "title": "Data Analyst Vault",
+      "url": "/docs"
+    },
+    {
+      "id": "/docs/job-prep/portfolio-building-guide",
+      "title": "Portfolio Building Guide",
+      "url": "/docs/job-prep/portfolio-building-guide"
+    },
+    {
+      "id": "/docs/job-prep/resume-tips",
+      "title": "Resume Tips",
+      "url": "/docs/job-prep/resume-tips"
+    },
+    {
+      "id": "/docs/learning-roadmap",
+      "title": "Learning Roadmap",
+      "url": "/docs/learning-roadmap"
+    },
+    {
+      "id": "/docs/map-of-content/skills-hub/artificial-intelligence",
+      "title": "Artificial Intelligence",
+      "url": "/docs/map-of-content/skills-hub/artificial-intelligence"
+    },
+    {
+      "id": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "title": "Microsoft Excel",
+      "url": "/docs/map-of-content/skills-hub/microsoft-excel"
+    },
+    {
+      "id": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "title": "Microsoft Power Bi",
+      "url": "/docs/map-of-content/skills-hub/microsoft-power-bi"
+    },
+    {
+      "id": "/docs/power-bi/power-bi-basics",
+      "title": "Power Bi Basics",
+      "url": "/docs/power-bi/power-bi-basics"
+    },
+    {
+      "id": "/docs/power-bi/data-modeling",
+      "title": "Data Modeling",
+      "url": "/docs/power-bi/data-modeling"
+    },
+    {
+      "id": "/docs/power-bi/data-analysis-expressions-dax",
+      "title": "Data Analysis Expressions (DAX)",
+      "url": "/docs/power-bi/data-analysis-expressions-dax"
+    },
+    {
+      "id": "/docs/power-bi/power-query-in-power-bi",
+      "title": "Power Query in Power Bi",
+      "url": "/docs/power-bi/power-query-in-power-bi"
+    },
+    {
+      "id": "/docs/power-bi/dashboard-development",
+      "title": "Dashboard Development",
+      "url": "/docs/power-bi/dashboard-development"
+    },
+    {
+      "id": "/docs/power-bi/visualizations",
+      "title": "Visualizations",
+      "url": "/docs/power-bi/visualizations"
+    },
+    {
+      "id": "/docs/power-bi/publishing-sharing",
+      "title": "Publishing & Sharing",
+      "url": "/docs/power-bi/publishing-sharing"
+    },
+    {
+      "id": "/docs/map-of-content/skills-hub/python",
+      "title": "Python",
+      "url": "/docs/map-of-content/skills-hub/python"
+    },
+    {
+      "id": "/docs/python/python-basics",
+      "title": "Python Basics",
+      "url": "/docs/python/python-basics"
+    },
+    {
+      "id": "/docs/python/numpy",
+      "title": "NumPy",
+      "url": "/docs/python/numpy"
+    },
+    {
+      "id": "/docs/python/pandas",
+      "title": "Pandas",
+      "url": "/docs/python/pandas"
+    },
+    {
+      "id": "/docs/python/matplotlib",
+      "title": "Matplotlib",
+      "url": "/docs/python/matplotlib"
+    },
+    {
+      "id": "/docs/python/exploratory-data-analysis-using-python",
+      "title": "Exploratory Data Analysis using Python",
+      "url": "/docs/python/exploratory-data-analysis-using-python"
+    },
+    {
+      "id": "/docs/python/automation",
+      "title": "Automation",
+      "url": "/docs/python/automation"
+    },
+    {
+      "id": "/docs/python/working-with-apis-and-files",
+      "title": "Working with APIS and Files",
+      "url": "/docs/python/working-with-apis-and-files"
+    },
+    {
+      "id": "/docs/map-of-content/skills-hub/statistics",
+      "title": "Statistics",
+      "url": "/docs/map-of-content/skills-hub/statistics"
+    },
+    {
+      "id": "/docs/statistics/descriptive-statistics",
+      "title": "Descriptive Statistics",
+      "url": "/docs/statistics/descriptive-statistics"
+    },
+    {
+      "id": "/docs/statistics/probability-statistics",
+      "title": "Probability & Statistics",
+      "url": "/docs/statistics/probability-statistics"
+    },
+    {
+      "id": "/docs/statistics/distributions",
+      "title": "Distributions",
+      "url": "/docs/statistics/distributions"
+    },
+    {
+      "id": "/docs/statistics/hypothesis-testing",
+      "title": "Hypothesis Testing",
+      "url": "/docs/statistics/hypothesis-testing"
+    },
+    {
+      "id": "/docs/statistics/correlation-vs-causation",
+      "title": "Correlation vs Causation",
+      "url": "/docs/statistics/correlation-vs-causation"
+    },
+    {
+      "id": "/docs/statistics/regression-basics",
+      "title": "Regression Basics",
+      "url": "/docs/statistics/regression-basics"
+    },
+    {
+      "id": "/docs/statistics/a-b-testing",
+      "title": "A-B Testing",
+      "url": "/docs/statistics/a-b-testing"
+    },
+    {
+      "id": "/docs/statistics/statistics-for-eda",
+      "title": "Statistics for EDA",
+      "url": "/docs/statistics/statistics-for-eda"
+    },
+    {
+      "id": "/docs/map-of-content/skills-hub/structured-query-language",
+      "title": "Structured Query Language",
+      "url": "/docs/map-of-content/skills-hub/structured-query-language"
+    },
+    {
+      "id": "/docs/sql/sql-basics",
+      "title": "SQL Basics",
+      "url": "/docs/sql/sql-basics"
+    },
+    {
+      "id": "/docs/sql/joins",
+      "title": "Joins",
+      "url": "/docs/sql/joins"
+    },
+    {
+      "id": "/docs/sql/unions",
+      "title": "Unions",
+      "url": "/docs/sql/unions"
+    },
+    {
+      "id": "/docs/sql/group-by-aggregations",
+      "title": "GROUP BY & AGGREGATIONS",
+      "url": "/docs/sql/group-by-aggregations"
+    },
+    {
+      "id": "/docs/sql/ctes-subqueries",
+      "title": "CTEs & Subqueries",
+      "url": "/docs/sql/ctes-subqueries"
+    },
+    {
+      "id": "/docs/sql/window-functions",
+      "title": "Window Functions",
+      "url": "/docs/sql/window-functions"
+    },
+    {
+      "id": "/docs/sql/data-cleaning-using-sql",
+      "title": "Data Cleaning using SQL",
+      "url": "/docs/sql/data-cleaning-using-sql"
+    },
+    {
+      "id": "/docs/sql/query-optimisation",
+      "title": "Query Optimisation",
+      "url": "/docs/sql/query-optimisation"
+    },
+    {
+      "id": "/docs/sql/exploratory-data-analysis-using-sql",
+      "title": "Exploratory Data Analysis using SQL",
+      "url": "/docs/sql/exploratory-data-analysis-using-sql"
+    }
+  ],
+  "links": [
+    {
+      "source": "/docs/ai/ai-basics",
+      "target": "/docs/ai/ai-tools-usage"
+    },
+    {
+      "source": "/docs/ai/ai-basics",
+      "target": "/docs/ai/prompt-engineering"
+    },
+    {
+      "source": "/docs/beyond-core/application-programming-interfaces-apis",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/beyond-core/cloud-architecture",
+      "target": "/docs/beyond-core/data-warehouse"
+    },
+    {
+      "source": "/docs/beyond-core/cloud-architecture",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/beyond-core/cloud-migration",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/beyond-core/customer-relationship-management-crm",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/beyond-core/data-warehouse",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/beyond-core/extract-transform-load-etl",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/beyond-core/git-github",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/excel/excel-basics",
+      "target": "/docs/excel/advanced-formulas"
+    },
+    {
+      "source": "/docs/excel/excel-basics",
+      "target": "/docs/excel/lookup-functions"
+    },
+    {
+      "source": "/docs/excel/excel-basics",
+      "target": "/docs/excel/pivot-tables-charts"
+    },
+    {
+      "source": "/docs/home/data-analyst-vault",
+      "target": "/docs/map-of-content/data-analyst"
+    },
+    {
+      "source": "/docs/home/data-analyst-vault",
+      "target": "/docs/how-to-use-the-vault"
+    },
+    {
+      "source": "/docs/home/data-analyst-vault",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/home/data-analyst-vault",
+      "target": "/docs/map-of-content/data-job-profiles-comparison"
+    },
+    {
+      "source": "/docs/home/data-analyst-vault",
+      "target": "/docs/map-of-content/beyond-core"
+    },
+    {
+      "source": "/docs/home/data-analyst-vault",
+      "target": "/docs/map-of-content/job-prep"
+    },
+    {
+      "source": "/docs/home/data-analyst-vault",
+      "target": "/docs/job-prep/top-100-questions"
+    },
+    {
+      "source": "/docs/how-to-use-the-vault",
+      "target": "/docs/map-of-content/data-analyst"
+    },
+    {
+      "source": "/docs/how-to-use-the-vault",
+      "target": "/docs/map-of-content/data-job-profiles-comparison"
+    },
+    {
+      "source": "/docs/how-to-use-the-vault",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/how-to-use-the-vault",
+      "target": "/docs/job-prep/top-100-questions"
+    },
+    {
+      "source": "/docs/how-to-use-the-vault",
+      "target": "/docs/job-prep/top-20-projects"
+    },
+    {
+      "source": "/docs/how-to-use-the-vault",
+      "target": "/docs/home/data-analyst-vault"
+    },
+    {
+      "source": "/docs/how-to-use-the-vault",
+      "target": "/docs/map-of-content/job-prep"
+    },
+    {
+      "source": "/docs",
+      "target": "/docs/map-of-content/data-analyst"
+    },
+    {
+      "source": "/docs",
+      "target": "/docs/how-to-use-the-vault"
+    },
+    {
+      "source": "/docs",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs",
+      "target": "/docs/map-of-content/data-job-profiles-comparison"
+    },
+    {
+      "source": "/docs",
+      "target": "/docs/map-of-content/beyond-core"
+    },
+    {
+      "source": "/docs",
+      "target": "/docs/map-of-content/job-prep"
+    },
+    {
+      "source": "/docs",
+      "target": "/docs/job-prep/top-100-questions"
+    },
+    {
+      "source": "/docs/job-prep/portfolio-building-guide",
+      "target": "/docs/job-prep/resume-tips"
+    },
+    {
+      "source": "/docs/job-prep/portfolio-building-guide",
+      "target": "/docs/job-prep/top-20-projects"
+    },
+    {
+      "source": "/docs/job-prep/top-20-projects",
+      "target": "/docs/job-prep/portfolio-building-guide"
+    },
+    {
+      "source": "/docs/learning-roadmap",
+      "target": "/docs/map-of-content/data-analyst"
+    },
+    {
+      "source": "/docs/learning-roadmap",
+      "target": "/docs/job-prep/top-20-projects"
+    },
+    {
+      "source": "/docs/learning-roadmap",
+      "target": "/docs/job-prep/resume-tips"
+    },
+    {
+      "source": "/docs/learning-roadmap",
+      "target": "/docs/job-prep/portfolio-building-guide"
+    },
+    {
+      "source": "/docs/learning-roadmap",
+      "target": "/docs/job-prep/top-100-questions"
+    },
+    {
+      "source": "/docs/learning-roadmap",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/learning-roadmap",
+      "target": "/docs/how-to-use-the-vault"
+    },
+    {
+      "source": "/docs/map-of-content/data-analyst",
+      "target": "/docs/map-of-content/workflow"
+    },
+    {
+      "source": "/docs/map-of-content/data-analyst",
+      "target": "/docs/map-of-content/data-job-profiles-comparison"
+    },
+    {
+      "source": "/docs/map-of-content/data-analyst",
+      "target": "/docs/map-of-content/beyond-core"
+    },
+    {
+      "source": "/docs/map-of-content/data-analyst",
+      "target": "/docs/map-of-content/job-prep"
+    },
+    {
+      "source": "/docs/map-of-content/job-prep",
+      "target": "/docs/job-prep/top-20-projects"
+    },
+    {
+      "source": "/docs/map-of-content/job-prep",
+      "target": "/docs/job-prep/portfolio-building-guide"
+    },
+    {
+      "source": "/docs/map-of-content/job-prep",
+      "target": "/docs/job-prep/resume-tips"
+    },
+    {
+      "source": "/docs/map-of-content/job-prep",
+      "target": "/docs/job-prep/top-100-questions"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/artificial-intelligence",
+      "target": "/docs/ai/ai-basics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/artificial-intelligence",
+      "target": "/docs/ai/ai-tools-usage"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/artificial-intelligence",
+      "target": "/docs/ai/ai-assisted-automation"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/artificial-intelligence",
+      "target": "/docs/ai/prompt-engineering"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/excel-basics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/advanced-formulas"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/lookup-functions"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/pivot-tables-charts"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/data-cleaning-using-excel"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/conditional-formatting"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/dashboard-in-excel"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/power-query-in-excel"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-excel",
+      "target": "/docs/excel/excel-automation-vba-basics-macros"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "target": "/docs/power-bi/power-bi-basics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "target": "/docs/power-bi/data-modeling"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "target": "/docs/power-bi/data-analysis-expressions-dax"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "target": "/docs/power-bi/power-query-in-power-bi"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "target": "/docs/power-bi/dashboard-development"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "target": "/docs/power-bi/visualizations"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/microsoft-power-bi",
+      "target": "/docs/power-bi/publishing-sharing"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/python",
+      "target": "/docs/python/python-basics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/python",
+      "target": "/docs/python/numpy"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/python",
+      "target": "/docs/python/pandas"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/python",
+      "target": "/docs/python/matplotlib"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/python",
+      "target": "/docs/python/exploratory-data-analysis-using-python"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/python",
+      "target": "/docs/python/automation"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/python",
+      "target": "/docs/python/working-with-apis-and-files"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/descriptive-statistics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/probability-statistics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/distributions"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/hypothesis-testing"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/correlation-vs-causation"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/regression-basics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/a-b-testing"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/statistics",
+      "target": "/docs/statistics/statistics-for-eda"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/sql-basics"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/joins"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/unions"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/group-by-aggregations"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/ctes-subqueries"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/window-functions"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/data-cleaning-using-sql"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/query-optimisation"
+    },
+    {
+      "source": "/docs/map-of-content/skills-hub/structured-query-language",
+      "target": "/docs/sql/exploratory-data-analysis-using-sql"
+    },
+    {
+      "source": "/docs/power-bi/power-bi-basics",
+      "target": "/docs/power-bi/data-modeling"
+    },
+    {
+      "source": "/docs/power-bi/power-bi-basics",
+      "target": "/docs/power-bi/data-analysis-expressions-dax"
+    },
+    {
+      "source": "/docs/power-bi/power-bi-basics",
+      "target": "/docs/power-bi/dashboard-development"
+    },
+    {
+      "source": "/docs/python/python-basics",
+      "target": "/docs/python/numpy"
+    },
+    {
+      "source": "/docs/python/python-basics",
+      "target": "/docs/python/pandas"
+    },
+    {
+      "source": "/docs/python/python-basics",
+      "target": "/docs/python/automation"
+    },
+    {
+      "source": "/docs/sql/sql-basics",
+      "target": "/docs/sql/joins"
+    },
+    {
+      "source": "/docs/sql/sql-basics",
+      "target": "/docs/sql/group-by-aggregations"
+    },
+    {
+      "source": "/docs/sql/sql-basics",
+      "target": "/docs/sql/exploratory-data-analysis-using-sql"
+    },
+    {
+      "source": "/docs/statistics/a-b-testing",
+      "target": "/docs/statistics/hypothesis-testing"
+    },
+    {
+      "source": "/docs/statistics/a-b-testing",
+      "target": "/docs/statistics/correlation-vs-causation"
+    },
+    {
+      "source": "/docs/statistics/correlation-vs-causation",
+      "target": "/docs/statistics/a-b-testing"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Power BI",
+  "pages": ["power-bi-basics", "data-modeling", "data-analysis-expressions-dax", "power-query-in-power-bi", "dashboard-development", "visualizations", "publishing-sharing"]
+}

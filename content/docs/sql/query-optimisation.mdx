@@ -1,0 +1,88 @@
+---
+title: "Query Optimisation"
+description: "Writing SQL that runs efficiently, especially important as dataset size grows."
+---
+
+> Writing SQL that runs efficiently, especially important as dataset size grows.
+
+## Overview
+
+A query that returns correct results but takes minutes (or fails outright) on a large dataset is a real practical problem for a Data Analyst. Query optimization is about writing SQL that gets the same correct answer more efficiently — not a universal set of rules, since actual performance depends heavily on the specific database engine and how the data is structured.
+
+## Why It Matters for a Data Analyst
+
+As datasets and organizations grow, poorly written queries can slow down shared databases for everyone, time out entirely, or simply take too long to be useful for time-sensitive analysis.
+
+## Core Concepts
+
+- **Index** — a data structure that speeds up lookups on specific columns, similar to an index in a book
+- **Execution plan** — the database's internal plan for how it will run a query, which can be inspected to understand performance
+- **Full table scan** — when a database reads every row in a table because it can't use an index to narrow the search
+
+## Key Optimization Principles
+
+### Filter Early
+Filtering with `WHERE` as early and specifically as possible reduces the amount of data the database has to process in later steps.
+
+### Select Only Required Columns
+Avoid `SELECT *` on large tables — retrieving unnecessary columns adds unnecessary I/O and memory overhead.
+
+### Join Efficiency
+Join on indexed columns where possible, and be mindful of join order in complex multi-table queries, since some databases process joins more efficiently with certain orderings.
+
+### Avoid Unnecessary Subqueries
+A correlated subquery that re-runs for every outer row can be dramatically slower than an equivalent `JOIN` or window function.
+
+### CTE Considerations
+In some databases, CTEs are optimized (inlined) the same as subqueries; in others, they may be materialized as a temporary result, which can help or hurt performance depending on context. This behavior varies significantly by database — don't assume a CTE is automatically faster or slower without checking.
+
+### Execution Plans
+Most databases provide a way to view a query's execution plan (e.g. `EXPLAIN` in PostgreSQL/MySQL), showing whether indexes are being used, where full table scans occur, and where the bulk of the time is being spent.
+
+## Large Dataset Considerations
+
+- Aggregating before joining, when possible, reduces the amount of data involved in the join itself
+- Filtering on indexed columns first narrows the working dataset before more expensive operations
+- Testing query performance on a representative sample before running on the full dataset can save significant iteration time
+
+## Real-World Data Analyst Use Cases
+
+- Speeding up a recurring report query that has started taking too long as the underlying table has grown
+- Diagnosing why a specific query is slow using an execution plan
+- Rewriting a correlated subquery as a window function for better performance
+
+## Common Mistakes
+
+- Using `SELECT *` out of habit on large production tables
+- Adding filters after a join instead of before, when the filter could have reduced the join's workload
+- Assuming a technique that helped performance on one database (e.g. a specific CTE behavior) applies identically on a different database engine
+
+## Best Practices
+
+- Filter early, select only necessary columns, and be deliberate about join order and join keys
+- Use the database's execution plan tool to diagnose slow queries rather than guessing
+- Test optimization changes and confirm they actually improve performance — don't assume
+
+## Interview Perspective
+
+### Common Interview Questions
+- How would you diagnose why a query is running slowly?
+- What's the difference between a query using an index and one performing a full table scan?
+- How would you optimize a query that joins several large tables?
+
+### What Interviewers Usually Test
+Whether the candidate has practical intuition about where performance problems typically come from, rather than memorized rules.
+
+### Common Traps
+Making a universal claim ("CTEs are always slower than subqueries") that doesn't hold across different database systems.
+
+## Practical Application
+
+Query optimization becomes increasingly important as an analyst moves from small sample datasets to production-scale data — a skill that often develops through direct experience diagnosing slow queries.
+
+## Revision Summary
+
+- Filter early, select only needed columns, and be deliberate about join keys and order.
+- Execution plans reveal whether a query is using indexes efficiently or performing full table scans.
+- Correlated subqueries can often be replaced with more efficient joins or window functions.
+- Optimization behavior (especially around CTEs) varies by database — verify rather than assume.

@@ -1,0 +1,85 @@
+---
+title: "Application Programming Interfaces (APIS)"
+description: "How analysts extract data programmatically from external systems, beyond what files or databases directly provide."
+---
+
+> How analysts extract data programmatically from external systems, beyond what files or databases directly provide.
+
+## Overview
+
+An API (Application Programming Interface) is a defined way for one system to request data or functionality from another. For a Data Analyst, APIs are most relevant as a data source — a way to pull data from a third-party platform (marketing tools, payment processors, social media platforms) directly into an analysis, rather than relying on manual exports.
+
+## Why a Data Analyst Should Understand This
+
+Many valuable data sources — marketing platforms, CRM systems, external market data — are only accessible via API. Understanding the basics lets an analyst pull this data directly rather than depending entirely on someone else to export it manually.
+
+## How It Relates to Analytics
+
+APIs are typically the "Extract" step in an analyst's data pipeline — the data still needs to be cleaned, transformed, and analyzed afterward, usually with tools like Python and Pandas.
+
+## When Analysts Interact With It
+
+- Pulling data from a marketing platform's API for campaign performance analysis
+- Automating a recurring data pull that previously required a manual export
+- Investigating why a dashboard's API-sourced data looks unexpected
+
+## Core Concepts
+
+- **Endpoint** — a specific URL representing a particular resource or function
+- **Request/response model** — the client sends a request; the server sends back a response
+- **HTTP methods** — `GET` (retrieve data) and `POST` (send data) are the most relevant for analysts pulling data
+- **Parameters** — values passed with a request to filter or customize the response (e.g. a date range)
+- **Headers** — metadata sent with a request, often including authentication details
+- **Authentication** — proving a request is authorized, commonly via an API key or token
+- **JSON** — the most common format APIs use to structure returned data
+- **Pagination** — large result sets are often split across multiple pages, requiring multiple requests
+- **Rate limits** — restrictions on how many requests can be made in a given time period
+- **REST APIs** — the most common API architecture style, built around standard HTTP methods and resource-based URLs
+
+## Typical Tools/Platforms
+
+Most analysts interact with APIs through Python (using the `requests` library) rather than a general-purpose API tool
+
+## Practical Example (Python)
+
+```python
+import requests
+
+response = requests.get(
+    "https://api.example.com/campaigns",
+    headers={"Authorization": "Bearer YOUR_API_KEY"},
+    params={"start_date": "2025-01-01", "end_date": "2025-01-31"}
+)
+
+if response.status_code == 200:
+    data = response.json()
+else:
+    print(f"Request failed: {response.status_code}")
+```
+
+## Important Concepts
+
+- Not every data source has an API — some data is only available via file export or direct database access
+- API documentation (provided by the platform) specifies exactly what endpoints, parameters, and authentication method are required — reading it carefully is usually the fastest path to a working request
+- API access often requires approval or a developer account from the platform, which can take time to set up
+
+## Interview Relevance
+
+### Common Interview Questions
+- What is an API, and how would an analyst use one?
+- What's the difference between a `GET` and `POST` request?
+- How would you handle a paginated API response?
+
+### What Interviewers Usually Test
+Basic conceptual understanding and awareness of practical issues (authentication, pagination, rate limits) — not deep API design knowledge.
+
+## Relationship to the Core Data Analyst Workflow
+
+APIs sit at the very start of the [WORKFLOW](/docs/map-of-content/workflow) — specifically the "gather data" stage — providing an alternative to file-based or database-based data collection.
+
+## Revision Summary
+
+- APIs let analysts pull data programmatically from external systems, most commonly via `GET` requests.
+- JSON is the typical response format; authentication (often an API key) is usually required.
+- Pagination and rate limits are practical realities analysts need to account for when working with real APIs.
+- API documentation from the specific platform is the definitive reference for how to use it correctly.

@@ -1,0 +1,93 @@
+---
+title: "Probability & Statistics"
+description: "The foundational probability concepts that underpin statistical reasoning: events, conditional probability, independence, and expected value."
+---
+
+> The foundational probability concepts that underpin statistical reasoning: events, conditional probability, independence, and expected value.
+
+## Overview
+
+Probability provides the mathematical foundation for statistical inference — hypothesis testing, confidence intervals, and A/B testing all rest on probability concepts. This note covers the fundamentals a Data Analyst needs to reason correctly about uncertainty.
+
+## Why It Matters for a Data Analyst
+
+Business decisions are made under uncertainty. Probability gives analysts a rigorous way to reason about likelihoods — how likely a result is due to chance, how confident to be in a conclusion, and how to combine multiple sources of uncertain information.
+
+## Core Concepts
+
+- **Probability** — a number between 0 and 1 representing how likely an event is
+- **Event** — a specific outcome or set of outcomes
+- **Conditional probability** — the probability of an event given that another event has occurred, written `P(A|B)`
+- **Independence** — two events are independent if the occurrence of one doesn't affect the probability of the other
+- **Bayes' theorem (conceptually)** — a way to update the probability of an event based on new evidence
+- **Expected value** — the long-run average outcome of a probabilistic scenario, weighted by probability
+
+## Conditional Probability
+
+`P(A|B)` reads as "the probability of A given B." This differs from `P(A)` alone whenever A and B are related.
+
+**Example:** The probability a customer churns (`P(churn)`) might be 10% overall, but the probability a customer churns given they haven't logged in for 30 days (`P(churn | inactive 30 days)`) could be much higher — the condition changes the probability.
+
+## Independence
+
+Two events are independent if knowing one doesn't change the probability of the other: `P(A|B) = P(A)`.
+
+**Example:** Whether a customer is in the East or West region is likely independent of whether they made a purchase on a Monday — knowing one tells you nothing about the other. By contrast, whether a customer received a promotional email and whether they made a purchase are likely *not* independent.
+
+## Bayes' Theorem (Conceptual)
+
+Bayes' theorem describes how to update a belief about the probability of an event as new evidence arrives:
+
+```
+P(A|B) = [P(B|A) × P(A)] / P(B)
+```
+
+**Conceptual example:** Given a base rate of fraud (`P(fraud)`) and how often a certain pattern appears in fraudulent vs legitimate transactions, Bayes' theorem lets an analyst calculate the actual probability a transaction is fraudulent *given* that it shows the pattern — often much different from either the base rate or the pattern's raw frequency alone.
+
+## Expected Value
+
+The expected value of an uncertain outcome is the sum of each possible outcome multiplied by its probability.
+
+**Example:** A marketing campaign with a 5% chance of generating $10,000 in revenue and a 95% chance of generating $0 has an expected value of `0.05 × 10,000 = $500` — useful for comparing options even when individual outcomes are uncertain.
+
+## Real-World Data Analyst Use Cases
+
+- Estimating the likelihood of a customer churning based on specific behavioral signals
+- Comparing the expected value of different marketing strategies before committing budget
+- Understanding why a rare but distinctive pattern (e.g. in fraud detection) needs Bayes' theorem, not just raw frequency, to interpret correctly
+
+## Common Mistakes
+
+- Confusing `P(A|B)` with `P(B|A)` — these are generally different and mixing them up is a very common statistical error
+- Assuming two variables are independent without checking, when they're actually related
+- Ignoring base rates when interpreting a probability — a classic error known as base rate neglect (e.g. overestimating how likely a positive test result actually indicates a rare condition)
+
+## Best Practices
+
+- Be explicit about which probability is being discussed (`P(A|B)` vs `P(B|A)`) rather than describing it loosely in words
+- Test assumptions of independence rather than assuming them, especially before hypothesis testing
+- Always factor in base rates when reasoning about the probability of a rare event given some evidence
+
+## Interview Perspective
+
+### Common Interview Questions
+- What's the difference between `P(A|B)` and `P(B|A)`?
+- Explain Bayes' theorem in plain language.
+- How would you calculate the expected value of a decision with uncertain outcomes?
+
+### What Interviewers Usually Test
+Whether the candidate can reason correctly about conditional probability — this is one of the most commonly misapplied statistical concepts.
+
+### Common Traps
+The classic base-rate neglect trap: assuming a positive signal (test result, fraud flag) means a high probability of the underlying condition, without accounting for how rare that condition is to begin with.
+
+## Practical Application
+
+Probability reasoning underlies hypothesis testing, A/B testing, and virtually every other inferential technique covered later in this section.
+
+## Revision Summary
+
+- Conditional probability `P(A|B)` is generally not the same as `P(B|A)` — confusing them is a common error.
+- Independence means one event doesn't affect the probability of another — don't assume it without checking.
+- Bayes' theorem updates a probability based on new evidence, accounting for base rates.
+- Expected value weights each possible outcome by its probability, useful for comparing uncertain options.

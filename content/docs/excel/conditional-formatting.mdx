@@ -1,0 +1,77 @@
+---
+title: "Conditional Formatting"
+description: "Highlighting cells automatically based on their values, making patterns and outliers visible at a glance."
+---
+
+> Highlighting cells automatically based on their values, making patterns and outliers visible at a glance.
+
+## Overview
+
+Conditional Formatting changes a cell's appearance (color, icon, bar) automatically based on rules applied to its value. Used well, it turns a plain table into something a stakeholder can scan and understand in seconds — useful both for personal analysis and for polished reports.
+
+## Why It Matters for a Data Analyst
+
+Numbers alone are hard to scan quickly. Conditional Formatting draws the eye to what matters — values above a threshold, negative numbers, or the top/bottom performers — without requiring the reader to read every cell individually.
+
+## Core Concepts
+
+- **Rule-based formatting** — a condition (e.g. "greater than 1000") triggers a formatting change
+- **Color scales** — a gradient applied across a range based on relative value
+- **Data bars** — an in-cell bar chart representing each value's magnitude
+- **Icon sets** — small icons (arrows, flags) indicating status or direction
+
+## How It Works
+
+A Conditional Formatting rule is applied to a range and evaluated for every cell in it. Rules can be simple (highlight cells above a value) or formula-based, allowing highly specific logic (e.g. highlight a row if a different column meets a condition).
+
+## Real-World Data Analyst Use Cases
+
+- Highlighting sales figures below target in red
+- Applying a color scale to a table of scores to instantly show highs and lows
+- Using a formula-based rule to highlight an entire row when a status column equals "At Risk"
+
+## Examples
+
+Highlight cells greater than 1000:
+- Home → Conditional Formatting → Highlight Cell Rules → Greater Than → 1000
+
+Formula-based rule to highlight a whole row where column D equals "At Risk":
+```
+=$D2="At Risk"
+```
+Applied to the full row range, with "Applies to" set accordingly.
+
+## Common Mistakes
+
+- Overusing multiple colors/rules, making the sheet harder to read rather than easier
+- Using absolute references in formula-based rules where relative references were needed, causing the rule to apply incorrectly across rows
+- Applying conditional formatting to an entire column instead of the actual data range, which can slow down large workbooks
+
+## Best Practices
+
+- Use one or two formatting cues at most per view — more becomes visual noise
+- Prefer formula-based rules for anything beyond simple thresholds, since they're far more flexible
+- Apply formatting to the exact data range, not entire columns, for performance and clarity
+
+## Interview Perspective
+
+### Common Interview Questions
+- How would you highlight all rows where a value falls below target?
+- What's the difference between a simple rule and a formula-based Conditional Formatting rule?
+
+### What Interviewers Usually Test
+Whether the candidate understands Conditional Formatting as a communication tool, not just a decorative feature.
+
+### Common Traps
+Using it purely for decoration rather than to highlight something analytically meaningful.
+
+## Practical Application
+
+Conditional Formatting is especially valuable in reports meant for non-technical stakeholders, where visual cues communicate faster than raw numbers.
+
+## Revision Summary
+
+- Conditional Formatting changes appearance automatically based on cell values.
+- Formula-based rules allow highly specific logic beyond simple thresholds.
+- Use sparingly — too many rules create visual noise instead of clarity.
+- Apply to exact data ranges, not full columns, for performance.

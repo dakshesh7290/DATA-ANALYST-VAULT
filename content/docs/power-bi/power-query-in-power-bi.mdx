@@ -1,0 +1,89 @@
+---
+title: "Power Query in Power Bi"
+description: "Importing, cleaning, and shaping data before it enters the data model — the same engine used in Excel, applied within Power BI."
+---
+
+> Importing, cleaning, and shaping data before it enters the data model — the same engine used in Excel, applied within Power BI.
+
+## Overview
+
+Power Query in Power BI performs the same role as it does in Excel: importing and transforming data through a repeatable, refreshable set of steps. In Power BI specifically, this is the stage before data enters the model — meaning decisions made here directly affect what's available for modeling and DAX later.
+
+## Why It Matters for a Data Analyst
+
+Getting data into the right shape before it reaches the model prevents a lot of downstream DAX complexity. Cleaning and shaping problems are usually easier to solve in Power Query than to work around later with formulas.
+
+## Core Concepts
+
+- **Query** — a saved, named sequence of transformation steps
+- **Applied Steps** — the ordered, editable list of transformations for a query
+- **M language** — the underlying scripting language Power Query generates and runs, viewable and editable directly for advanced cases
+- **Query folding** — when Power Query pushes transformation steps back to the data source (e.g. the database) instead of processing them locally, improving performance for supported sources
+
+## Common Transformations
+
+- **Importing data** from files, databases, APIs, and other sources
+- **Cleaning** — removing errors, blanks, and inconsistent values
+- **Transforming** — changing data types, renaming columns, restructuring
+- **Merging** — joining two queries together, similar to a SQL join
+- **Appending** — stacking two queries with matching structure, similar to SQL `UNION`
+- **Data types** — explicitly setting each column's type to avoid downstream modeling issues
+- **Removing duplicates**
+- **Handling missing values** — replacing, filtering, or filling
+- **Splitting columns** — breaking one column into multiple based on a delimiter or pattern
+- **Grouping** — aggregating rows by category, similar to SQL `GROUP BY`
+- **Pivot/unpivot** — reshaping between wide and long formats, often needed before data fits a clean star schema
+
+## An Introductory Look at M
+
+Every transformation in Power Query's interface generates M code behind the scenes, visible via the Advanced Editor. Most day-to-day work doesn't require writing M directly, but understanding that it exists — and being able to read it — helps when troubleshooting a query that isn't behaving as expected.
+
+```
+let
+    Source = Sql.Database("server", "database"),
+    FilteredRows = Table.SelectRows(Source, each [Amount] > 100)
+in
+    FilteredRows
+```
+
+## Real-World Data Analyst Use Cases
+
+- Cleaning inconsistent product category names before they reach the data model
+- Merging a sales export with a product lookup table before loading into Power BI
+- Unpivoting a wide-format spreadsheet export (one column per month) into a long format suitable for time-based analysis
+
+## Common Mistakes
+
+- Doing cleaning work in DAX (via calculated columns) that should have been handled in Power Query instead, adding unnecessary model complexity
+- Not setting data types explicitly, leading to incorrect sorting or aggregation behavior later
+- Choosing transformations that break query folding unnecessarily, hurting refresh performance on large data sources
+
+## Best Practices
+
+- Handle all cleaning and shaping in Power Query, before data reaches the model — keep the model itself focused on relationships and calculations
+- Set data types explicitly and early in each query
+- Be aware of query folding for large data sources, and structure transformations to preserve it where possible
+
+## Interview Perspective
+
+### Common Interview Questions
+- What's the difference between cleaning data in Power Query versus using DAX calculated columns?
+- What is query folding, and why does it matter for performance?
+- How would you reshape a wide-format dataset into a form suitable for a star schema?
+
+### What Interviewers Usually Test
+Whether the candidate understands the proper separation of concerns — Power Query for shaping data, DAX for calculations on top of a clean model.
+
+### Common Traps
+Trying to solve a data-shape problem (e.g. wide-vs-long format) with a complex DAX measure instead of a straightforward Power Query transformation.
+
+## Practical Application
+
+Power Query decisions early in a Power BI project directly shape how clean and maintainable the resulting data model and DAX measures will be.
+
+## Revision Summary
+
+- Power Query handles data import, cleaning, and shaping — before data reaches the model.
+- M is the underlying language Power Query generates; most work doesn't require writing it directly.
+- Query folding pushes transformations back to the source for better performance where supported.
+- Cleaning and shaping problems are generally easier to solve in Power Query than to compensate for later in DAX.

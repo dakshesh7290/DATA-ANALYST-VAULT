@@ -1,0 +1,101 @@
+---
+title: "Automation"
+description: "Using Python to automate repetitive analyst tasks — recurring reports, data refreshes, and routine cleaning — realistically and without overengineerin"
+---
+
+> Using Python to automate repetitive analyst tasks — recurring reports, data refreshes, and routine cleaning — realistically and without overengineering.
+
+## Overview
+
+A significant part of many analyst roles involves repetitive work: refreshing the same report weekly, cleaning newly received files the same way each time, or generating the same summary for a new time period. Python scripts can automate these tasks reliably, freeing time for genuinely new analysis.
+
+## Why It Matters for a Data Analyst
+
+Manual repetition is both time-consuming and error-prone. A well-built script performs the same steps identically every time, and can be scheduled to run without manual intervention at all.
+
+## Core Concepts
+
+- **Script** — a Python file that performs a defined sequence of tasks when run
+- **Scheduling** — running a script automatically at defined intervals (e.g. via cron, Task Scheduler, or a cloud service)
+- **Idempotency** — a script that produces the same correct result even if run multiple times on the same input, an important property for reliable automation
+- **Logging** — recording what a script did (and any errors), useful for diagnosing issues after the fact
+
+## Realistic Analyst Automation Examples
+
+### Automating a Recurring Report
+```python
+import pandas as pd
+
+df = pd.read_csv("latest_export.csv")
+df["order_date"] = pd.to_datetime(df["order_date"])
+summary = df.groupby(df["order_date"].dt.to_period("M"))["amount"].sum()
+summary.to_csv("monthly_summary.csv")
+```
+
+### Automating File-Based Cleaning
+```python
+import glob
+
+files = glob.glob("data/*.csv")
+cleaned_frames = []
+for file in files:
+    df = pd.read_csv(file)
+    df = df.dropna(subset=["order_id"])
+    df["region"] = df["region"].str.strip().str.upper()
+    cleaned_frames.append(df)
+
+combined = pd.concat(cleaned_frames)
+combined.to_csv("cleaned_combined.csv", index=False)
+```
+
+### Basic Logging
+```python
+import logging
+
+logging.basicConfig(filename="pipeline.log", level=logging.INFO)
+logging.info("Script started")
+# ... processing ...
+logging.info(f"Processed {len(df)} rows")
+```
+
+## Real-World Data Analyst Use Cases
+
+- Automatically combining and cleaning multiple daily data exports into one file each morning
+- Generating a formatted summary report from fresh data without manual rework each week
+- Running a data quality check script that flags anomalies before a report is sent out
+
+## Common Mistakes
+
+- Automating a fragile, one-off manual process without first making it robust to unexpected input (missing files, unexpected formats)
+- Not adding any logging or error handling, making failures silent and hard to diagnose
+- Automating something so early-stage or rarely repeated that the automation effort outweighs the time saved
+
+## Best Practices
+
+- Automate only genuinely repetitive tasks — automating something done once isn't worth the setup cost
+- Add basic error handling and logging so failures are visible, not silent
+- Test automation scripts against edge cases (empty files, unexpected columns) before relying on them
+
+## Interview Perspective
+
+### Common Interview Questions
+- What kinds of analyst tasks are good candidates for automation?
+- How would you handle a script failing partway through processing?
+- What's the risk of automating a task without proper error handling?
+
+### What Interviewers Usually Test
+Judgment about when automation is worth the investment, and awareness of failure modes — not deep software engineering knowledge.
+
+### Common Traps
+Treating automation as inherently good regardless of the task — some one-off or rarely-repeated tasks aren't worth automating.
+
+## Practical Application
+
+Automation is where Python delivers some of its clearest value over Excel for analysts — turning a recurring manual chore into a script that runs reliably and predictably.
+
+## Revision Summary
+
+- Automate genuinely repetitive tasks, not one-off work — the setup cost needs to be worth it.
+- Idempotent scripts produce the same correct result even if run multiple times, an important property for reliability.
+- Basic logging and error handling turn a fragile script into something trustworthy to run unattended.
+- Automation is one of Python's clearest practical advantages over spreadsheet-based workflows.

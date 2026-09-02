@@ -1,0 +1,100 @@
+---
+title: "GROUP BY & AGGREGATIONS"
+description: "Summarizing data across categories using aggregate functions — the SQL equivalent of a PivotTable."
+---
+
+> Summarizing data across categories using aggregate functions — the SQL equivalent of a PivotTable.
+
+## Overview
+
+`GROUP BY` combined with aggregate functions (`SUM`, `COUNT`, `AVG`, etc.) lets an analyst summarize data by category directly in SQL — answering questions like "total sales by region" or "average order value by customer segment" without exporting data anywhere else.
+
+## Why It Matters for a Data Analyst
+
+Most business questions are inherently about summaries, not individual rows: total revenue, average order size, count of active customers. `GROUP BY` is how these summaries are produced efficiently, even on very large datasets.
+
+## Core Concepts
+
+- **Aggregate function** — a function that summarizes multiple rows into one value (`SUM`, `COUNT`, `AVG`, `MIN`, `MAX`)
+- **Grouping column(s)** — the column(s) defining each summary group
+- **HAVING** — filters groups after aggregation, as opposed to `WHERE`, which filters rows before aggregation
+
+## How It Works
+
+`GROUP BY` collapses rows sharing the same value in the grouping column(s) into a single summary row, with aggregate functions calculating a value for each group. Any non-aggregated column in `SELECT` must appear in the `GROUP BY` clause.
+
+## WHERE vs HAVING
+
+| Aspect | WHERE | HAVING |
+|---|---|---|
+| Filters | Individual rows | Groups (after aggregation) |
+| Runs | Before grouping | After grouping |
+| Can reference aggregate functions | No | Yes |
+
+## Examples
+
+Total sales by region:
+```sql
+SELECT region, SUM(amount) AS total_sales
+FROM orders
+GROUP BY region;
+```
+
+Filtering groups using `HAVING`:
+```sql
+SELECT region, SUM(amount) AS total_sales
+FROM orders
+GROUP BY region
+HAVING SUM(amount) > 100000;
+```
+
+Combining `WHERE` (row filter) and `HAVING` (group filter):
+```sql
+SELECT region, COUNT(*) AS order_count
+FROM orders
+WHERE order_date >= '2025-01-01'
+GROUP BY region
+HAVING COUNT(*) > 50;
+```
+
+## Real-World Data Analyst Use Cases
+
+- Calculating total revenue by product category
+- Finding the average order value per customer segment
+- Identifying regions where order count exceeds a meaningful threshold, using `HAVING`
+
+## Common Mistakes
+
+- Trying to filter on an aggregate value using `WHERE` instead of `HAVING` — this causes an error, since `WHERE` runs before aggregation happens
+- Including a non-aggregated column in `SELECT` that isn't in `GROUP BY`, which either errors or (in some databases) returns an arbitrary value
+- Forgetting that `COUNT(*)` counts all rows including `NULL`s, while `COUNT(column)` excludes `NULL`s in that specific column
+
+## Best Practices
+
+- Use `WHERE` to filter rows before aggregation whenever possible, since it's more efficient than filtering after
+- Be explicit about `COUNT(*)` vs `COUNT(column)` depending on whether NULLs should be included
+- Alias aggregate columns clearly (`AS total_sales`) rather than leaving default, unreadable names
+
+## Interview Perspective
+
+### Common Interview Questions
+- What's the difference between `WHERE` and `HAVING`?
+- How would you find the total sales per region, showing only regions above a threshold?
+- What's the difference between `COUNT(*)` and `COUNT(column_name)`?
+
+### What Interviewers Usually Test
+Whether the candidate understands the logical order of operations — that `HAVING` operates on already-grouped, already-aggregated data.
+
+### Common Traps
+Attempting `WHERE SUM(amount) > 1000` instead of `HAVING SUM(amount) > 1000`.
+
+## Practical Application
+
+`GROUP BY` and aggregation are used in nearly every analytical SQL query — they're the direct SQL equivalent of building a PivotTable summary.
+
+## Revision Summary
+
+- `GROUP BY` collapses rows into summary groups; aggregate functions calculate a value per group.
+- `WHERE` filters rows before grouping; `HAVING` filters groups after aggregation.
+- Non-aggregated columns in `SELECT` must appear in `GROUP BY`.
+- `COUNT(*)` includes NULLs; `COUNT(column)` excludes NULLs in that column.

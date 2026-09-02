@@ -1,0 +1,4 @@
+{
+  "title": "Statistics",
+  "pages": ["descriptive-statistics", "probability-statistics", "distributions", "hypothesis-testing", "correlation-vs-causation", "regression-basics", "a-b-testing", "statistics-for-eda"]
+}

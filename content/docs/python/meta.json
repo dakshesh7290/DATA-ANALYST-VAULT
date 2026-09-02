@@ -1,0 +1,4 @@
+{
+  "title": "Python",
+  "pages": ["python-basics", "numpy", "pandas", "matplotlib", "exploratory-data-analysis-using-python", "automation", "working-with-apis-and-files"]
+}

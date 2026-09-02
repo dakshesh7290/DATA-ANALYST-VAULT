@@ -1,0 +1,96 @@
+---
+title: "Lookup Functions"
+description: "Retrieving values from one table based on a match in another — VLOOKUP, INDEX/MATCH, and XLOOKUP."
+---
+
+> Retrieving values from one table based on a match in another — VLOOKUP, INDEX/MATCH, and XLOOKUP.
+
+## Overview
+
+Lookup functions let an analyst pull a value from one table based on a matching key in another — the Excel equivalent of a SQL join. This is one of the most common tasks in real analyst work, and Excel offers several ways to do it, each with different strengths.
+
+## Why It Matters for a Data Analyst
+
+Data rarely lives in a single table. Combining a sales table with a product-lookup table, or matching employee IDs to names, requires a reliable way to look up matching values — this is a daily task for most analysts.
+
+## Core Concepts
+
+- **VLOOKUP** — looks up a value in the leftmost column of a range and returns a value from a specified column to the right
+- **INDEX/MATCH** — a two-function combination that finds a value's position (`MATCH`) and returns a corresponding value from any column (`INDEX`) — more flexible than `VLOOKUP`
+- **XLOOKUP** — a modern function that replaces both, supporting lookups in any direction and handling missing matches more gracefully
+
+## How It Works
+
+`VLOOKUP(lookup_value, table_array, col_index, [exact_match])` searches for `lookup_value` in the first column of `table_array` and returns the value in `col_index` columns to the right.
+
+`INDEX(return_range, MATCH(lookup_value, lookup_range, 0))` finds the position of `lookup_value` within `lookup_range`, then returns the corresponding value from `return_range` — this works regardless of which side of the table the lookup and return columns are on.
+
+`XLOOKUP(lookup_value, lookup_array, return_array)` performs the same job as `INDEX/MATCH` with simpler syntax and built-in handling for values that aren't found.
+
+## Comparisons
+
+| Aspect | VLOOKUP | INDEX/MATCH | XLOOKUP |
+|---|---|---|---|
+| Lookup direction | Left-to-right only | Any direction | Any direction |
+| Handles column insertion | Breaks if columns are inserted | Robust to column changes | Robust to column changes |
+| Missing match handling | Returns `#N/A` unless handled | Returns `#N/A` unless handled | Built-in `if_not_found` argument |
+| Readability | Simple for basic cases | More complex syntax | Simple and flexible |
+| Availability | All Excel versions | All Excel versions | Modern Excel/Microsoft 365 only |
+
+## Examples
+
+VLOOKUP for a product price:
+```
+=VLOOKUP(A2, ProductTable, 3, FALSE)
+```
+
+INDEX/MATCH for the same result, more robustly:
+```
+=INDEX(ProductTable[Price], MATCH(A2, ProductTable[ProductID], 0))
+```
+
+XLOOKUP, with a fallback for no match:
+```
+=XLOOKUP(A2, ProductTable[ProductID], ProductTable[Price], "Not Found")
+```
+
+## Real-World Data Analyst Use Cases
+
+- Matching a customer ID to their name and region from a separate lookup table
+- Pulling a product's category into a sales table based on product ID
+- Building a reference table that other formulas depend on
+
+## Common Mistakes
+
+- Forgetting the `FALSE`/exact-match argument in `VLOOKUP`, causing approximate (and often wrong) matches
+- Using `VLOOKUP` when the return column is to the left of the lookup column — this fails outright
+- Not handling `#N/A` errors when no match is found, leaving broken-looking output
+
+## Best Practices
+
+- Prefer `XLOOKUP` when available; fall back to `INDEX/MATCH` for compatibility with older Excel versions
+- Always specify exact match explicitly rather than relying on defaults
+- Wrap lookups in `IFERROR` or use `XLOOKUP`'s built-in fallback to handle missing matches gracefully
+
+## Interview Perspective
+
+### Common Interview Questions
+- What's the difference between `VLOOKUP` and `INDEX/MATCH`?
+- Why might `VLOOKUP` fail after someone inserts a new column?
+- How does `XLOOKUP` improve on `VLOOKUP`?
+
+### What Interviewers Usually Test
+Whether the candidate understands *why* `INDEX/MATCH` or `XLOOKUP` is generally preferred, not just that they exist.
+
+### Common Traps
+Assuming `VLOOKUP` can look leftward — it cannot without restructuring the data or switching approaches.
+
+## Practical Application
+
+Lookup functions are the most common way analysts combine data across tables in Excel — functionally similar to a SQL `JOIN`, but performed within a spreadsheet.
+
+## Revision Summary
+
+- `VLOOKUP` only looks rightward and breaks if columns are inserted; `INDEX/MATCH` and `XLOOKUP` don't have this limitation.
+- `XLOOKUP` is the modern, most flexible option where available.
+- Always use exact match, and always handle the case where no match is found.

@@ -1,0 +1,87 @@
+---
+title: "Cloud Migration"
+description: "Why and how organizations move data infrastructure from on-premise systems to the cloud, and what this means for a Data Analyst."
+---
+
+> Why and how organizations move data infrastructure from on-premise systems to the cloud, and what this means for a Data Analyst.
+
+## Overview
+
+Cloud migration is the process of moving an organization's data, applications, and infrastructure from on-premise servers to cloud-based platforms. For a Data Analyst, understanding this at a conceptual level helps explain why data sources, access methods, and performance characteristics might change during or after a migration.
+
+## Why a Data Analyst Should Understand This
+
+Analysts are downstream consumers of whatever infrastructure the organization runs. A migration can change where data lives, how it's accessed, and how quickly it's available — understanding the basics helps an analyst adapt and communicate clearly during a transition.
+
+## How It Relates to Analytics
+
+Migration projects often directly affect an analyst's daily tools — a database an analyst queries might move to a new cloud platform, changing connection details, performance, or available features.
+
+## What Cloud Computing Means
+
+Cloud computing means using computing resources (storage, processing power, databases) hosted and managed by a third-party provider over the internet, rather than owned and maintained on physical servers by the organization itself.
+
+## Why Organizations Migrate
+
+- **Scalability** — cloud resources can expand or contract based on demand, without purchasing physical hardware
+- **Cost structure** — shifting from large upfront hardware investment toward ongoing operational cost
+- **Maintenance** — the cloud provider handles much of the underlying infrastructure maintenance
+- **Modern tooling** — cloud platforms often provide easier access to modern analytics and AI tools
+
+## On-Premise vs Cloud
+
+| Aspect | On-Premise | Cloud |
+|---|---|---|
+| Infrastructure ownership | Organization owns and maintains hardware | Provider owns and maintains hardware |
+| Scalability | Requires purchasing additional hardware | Scales on demand |
+| Cost structure | Large upfront capital investment | Ongoing operational cost, often usage-based |
+| Maintenance responsibility | Organization's IT team | Largely the cloud provider |
+| Typical access | Internal network | Internet-based, with appropriate security controls |
+
+## Migration Strategies (Conceptual)
+
+Organizations typically choose from strategies ranging from a direct "lift and shift" (moving systems largely as-is) to a more involved re-architecture that takes fuller advantage of cloud-native capabilities. The right approach depends on cost, timeline, and how much the organization wants to modernize during the move, rather than simply relocate.
+
+## Data Migration
+
+Migrating the data itself involves extracting it from the old system, transforming it if the new system's structure differs, and loading it into the new cloud environment — closely related to the ETL process.
+
+## Risks
+
+- Data loss or corruption during the migration process
+- Downtime affecting reporting and analysis during the transition
+- Unexpected cost increases if cloud usage isn't carefully monitored afterward
+
+## Security and Governance
+
+Migrating to the cloud introduces new considerations around who can access data, how it's encrypted, and how compliance requirements (relevant to the industry and region) are maintained in the new environment.
+
+## Cost
+
+Cloud costs are often usage-based rather than fixed, which can create unexpected expense if data storage or processing scales up without monitoring — a consideration relevant to analysts building queries or pipelines that run frequently.
+
+## Analyst Impact
+
+- Data sources and connection details may change, requiring updated queries or reports
+- Performance characteristics may differ, sometimes improving, sometimes requiring query adjustments
+- New self-service or AI-powered analytics features may become available as part of the migration
+
+## Interview Relevance
+
+### Common Interview Questions
+- What are the general advantages of cloud infrastructure over on-premise systems?
+- How might a cloud migration affect a Data Analyst's day-to-day work?
+
+### What Interviewers Usually Test
+General awareness of cloud concepts and their practical implications for analysts — not deep migration engineering knowledge.
+
+## Relationship to the Core Data Analyst Workflow
+
+Cloud migration affects the "gather data" and infrastructure context of the [WORKFLOW](/docs/map-of-content/workflow), though it's typically managed by Data Engineers rather than analysts directly.
+
+## Revision Summary
+
+- Cloud migration moves infrastructure from on-premise servers to cloud-hosted platforms, typically for scalability and reduced maintenance burden.
+- Migration can affect analyst-facing tools — data sources, connections, and performance may all change.
+- Data migration itself is closely related to ETL — extracting, transforming, and loading data into the new environment.
+- Analysts should be aware of new security, cost, and governance considerations that come with cloud infrastructure.

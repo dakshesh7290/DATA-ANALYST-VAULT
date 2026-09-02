@@ -1,0 +1,81 @@
+---
+title: "Excel Automation (VBA Basics & Macros)"
+description: "Automating repetitive Excel tasks using recorded macros and basic VBA, without turning this into a full programming course."
+---
+
+> Automating repetitive Excel tasks using recorded macros and basic VBA, without turning this into a full programming course.
+
+## Overview
+
+VBA (Visual Basic for Applications) is Excel's built-in programming language, and a Macro is a recorded or written sequence of actions that can be replayed automatically. For a Data Analyst, VBA is most useful for automating genuinely repetitive tasks — not for building complex applications. This note covers the fundamentals an analyst needs, not comprehensive VBA programming.
+
+## Why It Matters for a Data Analyst
+
+Some tasks (formatting a report the same way every week, generating the same set of summary tables from a fresh data export) are repetitive enough that automating them saves real time. VBA lets an analyst automate these without needing a separate programming tool.
+
+## Core Concepts
+
+- **Macro** — a saved sequence of actions that can be replayed
+- **Recording a macro** — Excel can record manual actions and convert them into VBA code automatically
+- **VBA Editor** — the interface for viewing, writing, and editing macro code directly
+- **Subroutine (`Sub`)** — a named block of VBA code that performs a task when run
+
+## How It Works
+
+The simplest path is recording: Excel watches the analyst perform a task manually (formatting cells, applying filters, generating a report) and converts those actions into VBA code. That code can then be replayed on new data with a single click or keyboard shortcut. More advanced use involves writing or editing VBA code directly for logic recording alone can't capture (loops, conditional logic, error handling).
+
+## When to Use It
+
+- A task is performed identically, repeatedly, on new data (e.g. weekly report formatting)
+- The task is too Excel-specific or too small to justify moving to Python
+- Non-technical stakeholders need a "one-click" report refresh without learning a new tool
+
+## Formula-Based Automation vs VBA
+
+| Aspect | Formula-Based Automation | VBA |
+|---|---|---|
+| Setup complexity | Lower | Higher |
+| Handles multi-step processes | Limited | Well suited |
+| Requires "running" an action | No — recalculates live | Yes — must trigger the macro |
+| Best for | Calculations that should always be current | Repetitive procedural tasks (formatting, exporting, generating reports) |
+
+## Real-World Data Analyst Use Cases
+
+- A macro that reformats a freshly exported report into the company's standard layout
+- A macro that copies data from several sheets into a single summary sheet
+- A button that refreshes all PivotTables and exports the result as a PDF
+
+## Common Mistakes
+
+- Automating a task with VBA that would be simpler and more maintainable as a formula or Power Query step
+- Recording a macro without understanding what the generated code does, making it impossible to fix when it breaks
+- Hard-coding cell ranges into a macro, so it breaks when the data size changes
+
+## Best Practices
+
+- Reach for VBA only after confirming a formula-based or Power Query approach can't do the job
+- Review recorded macro code and clean it up rather than leaving Excel's often-verbose auto-generated version untouched
+- Use dynamic ranges (based on the actual data extent) rather than hard-coded cell references, so macros survive changes in data size
+
+## Interview Perspective
+
+### Common Interview Questions
+- When would you use VBA instead of a formula-based solution?
+- What's the difference between recording a macro and writing VBA code directly?
+
+### What Interviewers Usually Test
+Judgment about when automation is actually worth the setup cost — not deep VBA programming knowledge, for most Data Analyst interviews.
+
+### Common Traps
+Over-engineering a task with VBA that a simple formula or Power Query step would have handled more reliably.
+
+## Practical Application
+
+For most analysts, VBA use is limited to a handful of well-defined, repetitive tasks — it's a tool of convenience, not a primary analysis method.
+
+## Revision Summary
+
+- VBA automates repetitive Excel tasks via macros, either recorded or written directly.
+- Best suited for procedural, repeatable tasks — not a replacement for formulas or Power Query.
+- Recorded macros should be reviewed and cleaned up, not used as a black box.
+- Use dynamic ranges so macros don't break when data size changes.

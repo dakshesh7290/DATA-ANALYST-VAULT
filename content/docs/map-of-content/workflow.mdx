@@ -1,0 +1,140 @@
+---
+title: "Workflow"
+description: "The complete end-to-end process a Data Analyst follows on a real project, illustrated using a recurring business scenario: declining sales."
+---
+
+> The complete end-to-end process a Data Analyst follows on a real project, illustrated using a recurring business scenario: declining sales.
+
+## Overview
+
+Data analysis is rarely a single step — it's a chain of stages, each depending on the one before it. This note walks through the full workflow a Data Analyst typically follows, from an ambiguous business problem to a monitored, acted-on decision. Throughout, we'll use one running example: **a company noticing declining sales** and wanting to understand why.
+
+## The Stages
+
+### 1. Understand the Business Problem
+
+**What happens:** The analyst clarifies what the stakeholder actually wants to know, since business requests often start vague ("sales are down, figure out why").
+
+**Why it matters:** A technically correct analysis that answers the wrong question wastes everyone's time.
+
+**Example:** The analyst asks whether "declining sales" means total revenue, unit volume, or a specific region/product line — the answer changes the entire analysis.
+
+**Common mistake:** Starting to query data before the actual question is clear.
+
+### 2. Define Objectives
+
+**What happens:** The vague problem is translated into a specific, answerable objective.
+
+**Example:** "Explain the 12% revenue decline in Q3 compared to Q2, and identify which product categories or regions are driving it."
+
+### 3. Identify KPIs
+
+**What happens:** The analyst identifies which metrics will be used to measure and explain the problem.
+
+**Example:** Revenue, units sold, average order value, and customer count, broken down by region and category.
+
+### 4. Gather Data
+
+**What happens:** The analyst identifies where the relevant data lives — a database, CRM, spreadsheet exports, or an API — and begins collecting it.
+
+**Typical tools:** SQL, APIs, exported files.
+
+### 5. Understand Data Sources
+
+**What happens:** Before analyzing, the analyst learns how each data source is structured, what each field means, and how tables relate to each other.
+
+**Common mistake:** Assuming a field means what its name suggests, without checking (e.g. "order_date" might mean the date an order was placed, or the date it was fulfilled).
+
+### 6. Validate Data
+
+**What happens:** The analyst checks the data is complete, correctly scoped (right date range, right region), and free of obvious structural problems before investing time in analysis.
+
+### 7. Clean Data
+
+**What happens:** Handling missing values, duplicates, inconsistent formatting, and incorrect data types.
+
+**Example:** Some sales records have a missing region field; the analyst decides whether to exclude them or impute a value, and documents the decision.
+
+**Tools used here:** SQL, Excel, Python.
+
+### 8. Transform Data
+
+**What happens:** Reshaping data into a form suitable for analysis — aggregating, pivoting, joining multiple tables together.
+
+### 9. Explore Data
+
+**What happens:** Exploratory Data Analysis (EDA) — looking at distributions, trends over time, and initial patterns before forming conclusions.
+
+**Example:** Plotting monthly revenue by category reveals the decline is concentrated in one product line, not company-wide.
+
+### 10. Analyze Data
+
+**What happens:** Digging into the specific drivers behind the pattern found during exploration — segment comparisons, statistical checks, deeper breakdowns.
+
+**Example:** Comparing average order value and order count separately reveals the decline is driven by fewer orders, not smaller orders — pointing toward a demand or traffic issue rather than a pricing issue.
+
+### 11. Identify Trends/Patterns
+
+**What happens:** Synthesizing findings into a clear narrative: what changed, when, and for whom.
+
+### 12. Build Visualizations
+
+**What happens:** Turning findings into charts that make the pattern immediately clear to a non-technical audience.
+
+**Tools used here:** Excel, Power BI, Python (Matplotlib).
+
+### 13. Develop Dashboards/Reports
+
+**What happens:** For ongoing monitoring rather than a one-off analysis, findings are built into a dashboard stakeholders can check regularly.
+
+### 14. Generate Insights
+
+**What happens:** Moving from "what the data shows" to "what it means for the business" — insight, not just observation.
+
+**Example:** "The decline is concentrated in the Home Goods category, driven by fewer repeat customers in the last two months, coinciding with a competitor's price drop."
+
+### 15. Communicate Findings
+
+**What happens:** Presenting results clearly to stakeholders, tailored to their technical background, with the recommendation front and center.
+
+**Common mistake:** Leading with methodology instead of the conclusion.
+
+### 16. Recommend Actions
+
+**What happens:** Translating insight into a specific, actionable recommendation.
+
+**Example:** "Consider a targeted promotion for repeat Home Goods customers, and monitor competitor pricing in that category going forward."
+
+### 17. Monitor Results
+
+**What happens:** After a decision is made, the analyst tracks whether the intended effect actually occurred.
+
+### 18. Iterate
+
+**What happens:** Based on monitoring results, the analysis is refined, the dashboard is updated, or a new question emerges — the cycle continues.
+
+## How the Core Tools Fit Into This Workflow
+
+| Stage | Typical Tool |
+|---|---|
+| Gathering data | SQL, APIs |
+| Cleaning and transforming | SQL, Excel, Python (Pandas) |
+| Exploration | SQL, Python, Excel |
+| Statistical analysis | Statistics, Python |
+| Visualization | Excel, Power BI, Python (Matplotlib) |
+| Dashboards/reporting | Power BI, Excel |
+| Productivity/assistance throughout | AI tools |
+
+## Common Mistakes Across the Workflow
+
+- Skipping problem definition and jumping straight to querying
+- Not validating data before analyzing it
+- Confusing correlation with causation when identifying a driver
+- Building a beautiful dashboard that doesn't answer the actual business question
+- Failing to monitor whether a recommendation actually worked
+
+## Revision Summary
+
+- The workflow runs: business problem → objectives → KPIs → data gathering → validation → cleaning → transformation → exploration → analysis → pattern identification → visualization → dashboards → insight → communication → recommendation → monitoring → iteration.
+- Each stage depends on the one before it — skipping a stage (especially problem definition or data validation) is a common source of flawed analysis.
+- Different tools (SQL, Excel, Power BI, Python, Statistics, AI) map onto different stages rather than being interchangeable.

@@ -1,0 +1,4 @@
+{
+  "title": "SQL",
+  "pages": ["sql-basics", "joins", "unions", "group-by-aggregations", "ctes-subqueries", "window-functions", "data-cleaning-using-sql", "query-optimisation", "exploratory-data-analysis-using-sql"]
+}
